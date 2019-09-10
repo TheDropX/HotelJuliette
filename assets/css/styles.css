@@ -1,0 +1,54 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+.bg {
+
+    background-image: url("../img/first.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px) brightness(75%) contrast(100%) invert(0%) saturate(100%);
+  }
+
+.first_hm {
+
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+}
+
+.first_h1 {
+
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    color: rgb(255,255,255);
+    filter: brightness(100%);
+    text-shadow: 2px 2px #10121a;
+
+}
+
+.first_p {
+
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 55%;
+    color: rgb(255,255,255);
+    filter: brightness(100%);
+    text-shadow: 2px 2px #10121a;
+
+}
