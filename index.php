@@ -7,10 +7,31 @@
   </head>
 
 <body>
-<div class="first">
-    <img src="./img/first.jpg" class="first_img">
-</div>
+    <style>
+body {
 
+background-color: #121212;
+
+}
+
+.first {
+
+width: 50%;
+height: 50%;
+
+}
+
+.first_img {
+
+background-image: url("./img/first.jpg");
+filter: blur(5px) brightness(50%);
+
+}
+    </style>
+
+    <div class="first">
+        <img src="./img/first.jpg" class="first_img">
+    </div>
 
 </body>
 
