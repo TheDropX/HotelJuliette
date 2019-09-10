@@ -8,25 +8,32 @@
 
 <body>
     <style>
-body {
+    ::-webkit-scrollbar { 
 
-background-color: #121212;
+        display: none; 
 
-}
+    }
 
-.first {
+    body {
 
-width: 50%;
-height: 50%;
+        background-color: #121212;
 
-}
+    }
 
-.first_img {
+    .first {
 
-background-image: url("./img/first.jpg");
-filter: blur(5px) brightness(50%);
+        width: 50%;
+        height: 50%;
+        margin: 0px auto;
 
-}
+    }
+
+    .first_img {
+
+        background-image: url("./img/first.jpg");
+        filter: blur(5px) brightness(50%);
+
+    }
     </style>
 
     <div class="first">
