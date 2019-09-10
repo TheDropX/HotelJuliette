@@ -4,14 +4,14 @@ body {
 
 }
 
-div .first {
+.first {
 
     width: 50%;
     height: 50%;
 
 }
 
-img .first_img {
+.first_img {
 
     background-image: url("./img/first.jpg");
     filter: blur(5px) brightness(50%);
