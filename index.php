@@ -10,7 +10,9 @@
   </head>
 
 <body>
-<div class="first"></div>
+<div class="first">
+    <img src="./img/first.jpg" class="first_img">
+</div>
 
 
 </body>
