@@ -10,10 +10,8 @@
   </head>
 
 <body>
+<div class="first"></div>
 
-<?php
-echo "Deploy test.";
-?>
 
 </body>
 
