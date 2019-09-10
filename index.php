@@ -1,3 +1,4 @@
 <?php 
-echo "Working..."
+echo "Working...";
+echo "Testing..."
 ?>
