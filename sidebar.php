@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="nav navbar-nav flex-grow-1 justify-content-between">
                     <li class="nav-item d-none d-xs-block d-md-block" role="presentation">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/index.php">
                             <i class="fa fa-cog fa-lg"></i>
                         </a>
                     </li>
