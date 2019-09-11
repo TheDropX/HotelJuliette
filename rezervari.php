@@ -20,8 +20,8 @@ include_once "sidebar.php";
 
     <div class="bg"></div>
     <div class="first_hm">
-            <h1 class="first_h1" data-aos="zoom-in">Firma de exercitiu</h1>
-            <p class="first_p">In development...</p>
+            <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
+            <p class="first_p">Pagină în construcție...</p>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
