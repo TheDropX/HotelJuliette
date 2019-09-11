@@ -14,10 +14,13 @@
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="/echipa.php">Echipa</a>
+                        <a class="nav-link" href="/index.php">Acasă</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="/rezervari.php">Rezervari</a>
+                        <a class="nav-link" href="/echipa.php">Echipă</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/rezervari.php">Rezervări</a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" href="/contact.php">Contact</a>
