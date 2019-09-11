@@ -47,7 +47,7 @@
     width: 40%;
     }
     </style>
-    <div class="bgimg">
+    <div class="bgimg"></div>
     <div class="topleft">
         <p>hotel.thedrop.me</p>
     </div>
@@ -58,7 +58,6 @@
     </div>
     <div class="bottomleft">
         <p>School project.</p>
-    </div>
     </div>
     </body>
 </html>
