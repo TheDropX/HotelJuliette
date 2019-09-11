@@ -68,5 +68,12 @@
     <div class="bottomleft">
         <p>School project.</p>
     </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
     </body>
 </html>
