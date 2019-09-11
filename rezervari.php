@@ -11,11 +11,12 @@
     }
 
     .bgimg {
-    background-image: url('/w3images/forestbridge.jpg');
-    height: 100%;
+    background-image: url("../img/first.jpg");
+    height: 100%; 
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    filter: blur(3px) brightness(75%) contrast(100%) invert(0%) saturate(100%);
     color: white;
     font-family: "Courier New", Courier, monospace;
     font-size: 25px;
