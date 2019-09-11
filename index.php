@@ -16,7 +16,7 @@ include_once "sidebar.php";
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body style="background: #f9f9f9;">
+<body style="background: #000000;">
 
     <div class="bg"></div>
     <div class="first_hm">
