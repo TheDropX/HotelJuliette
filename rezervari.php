@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+include_once "sidebar.php";
+?>
 <html>
 
 <head>
