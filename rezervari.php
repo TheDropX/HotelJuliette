@@ -18,7 +18,7 @@
     background-size: cover;
     filter: blur(3px) brightness(75%) contrast(100%) invert(0%) saturate(100%);
     color: white;
-    font-family: "Courier New", Courier, monospace;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 25px;
     }
 
