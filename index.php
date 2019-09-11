@@ -16,7 +16,7 @@ include_once "sidebar.php";
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body style="background: #121212">
+<body style="background: #f9f9f9;">
 
     <div class="bg"></div>
     <div class="first_hm">
@@ -24,7 +24,7 @@ include_once "sidebar.php";
             <p class="first_p">In development...</p>
     </div>
     <div class="container" style="text-align: center;">
-        <h1 data-aos="zoom-in">Bine ai venit la Hotel x!</h1>
+        <h1 style="" data-aos="zoom-in">Bine ai venit la Hotel x!</h1>
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
     <script src="assets/js/jquery.min.js"></script>
