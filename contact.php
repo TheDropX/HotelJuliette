@@ -1,5 +1,5 @@
 <?php
-include "sidebar.php";
+include_once "sidebar.php";
 ?>
 <html>
 
