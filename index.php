@@ -23,12 +23,12 @@ include_once "sidebar.php";
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
             <p class="first_p">Pagină în construcție...</p>
     </div>
-    <!--
-    <div class="container" style="text-align: center;">
+
+    <div class="container" style="text-align: center; padding-top: 10px;">
         <h1 style="color: #8e4905;">Bine ai venit la Hotel x!</h1>
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
-    -->
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
