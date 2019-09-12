@@ -29,6 +29,15 @@ include_once "sidebar.php";
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
 
+    <div class="container">
+        <div class="roombg"></div>
+
+    </div>
+    <div class="first_hm">
+            <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
+            <p class="first_p">Pagină în construcție...</p>
+    </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
