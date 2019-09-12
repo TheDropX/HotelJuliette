@@ -18,7 +18,7 @@ include_once "sidebar.php";
 
 <body style="background: #000000;">
 
-    <div class="container">
+    <section>
     <div class="bg"></div>
     <div class="first_hm">
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
@@ -29,7 +29,7 @@ include_once "sidebar.php";
         <h1 style="color: #8e4905;">Bine ai venit la Hotel x!</h1>
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
-    </div>
+    </section>
     <!--
     <div class="container">
         <div class="roombg"></div>
