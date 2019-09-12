@@ -30,6 +30,7 @@ include_once "sidebar.php";
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
     </div>
+    <!--
     <div class="container">
         <div class="roombg"></div>
 
@@ -38,7 +39,7 @@ include_once "sidebar.php";
             <p class="first_p">Test</p>
     </div>
 
-    </div>
+    </div>-->
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
