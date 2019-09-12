@@ -32,10 +32,11 @@ include_once "sidebar.php";
     <div class="container">
         <div class="roombg"></div>
 
+        <div class="first_hm">
+            <h1 class="first_h1" data-aos="zoom-in">Test</h1>
+            <p class="first_p">Test</p>
     </div>
-    <div class="first_hm">
-            <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
-            <p class="first_p">Pagină în construcție...</p>
+
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
