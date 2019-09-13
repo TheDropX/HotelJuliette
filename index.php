@@ -41,7 +41,14 @@ include_once "sidebar.php";
     <section style="background: #fff;">
     <div class="container" style="text-align: center; padding: 30px 20px;">
         <h1 style="color: #8e4905;">Hotel x</h1>
-        <p>Descriere.</p>
+        <?php
+        for(i=0;i<=30;i++){
+
+            echo "<p>Descriere.</p>";
+            //xd
+
+        }
+        ?>
     </div>
     </section>
 
