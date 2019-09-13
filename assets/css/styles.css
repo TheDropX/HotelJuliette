@@ -19,6 +19,7 @@ body, html {
 
 .roombg {
 
+    position: relative;
     background-image: url("../img/room.jpg");
     height: 720px;
     width: 1600px; 
