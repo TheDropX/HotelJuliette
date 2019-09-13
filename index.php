@@ -33,7 +33,7 @@ include_once "sidebar.php";
     </div>
     </section>
 
-    <section style="background: #fff;">
+    <section style="background: #000000;">
     <div class="roombg"></div>
 
     </section>
