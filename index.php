@@ -50,7 +50,12 @@ All rooms feature air conditioning, cable flat screen television, minibar, tea a
 Guests of the Hotel International Iasi can enjoy an exceptional meal at the three elegant a la carte restaurants or may choose to sit back and relax while enjoying glorious views in the hotel’s Sky Lounge. This 4-star hotel in Iasi also boasts eight conference halls for hosting business meetings and social events.</p>
     </div>
     </section>
-
+    
+    <section style="background: #000000;">
+        <div class="roombg"></div>
+        <div class="bed"></div>
+    </section>
+    
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
