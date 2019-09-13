@@ -38,6 +38,13 @@ include_once "sidebar.php";
         <div class="bed"></div>
     </section>
 
+    <section style="background: #fff;">
+    <div class="container" style="text-align: center; padding: 30px 20px;">
+        <h1 style="color: #8e4905;">Hotel x</h1>
+        <p>Descriere.</p>
+    </div>
+    </section>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
