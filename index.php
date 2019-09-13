@@ -32,6 +32,11 @@ include_once "sidebar.php";
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
     </section>
+
+    <section style="background: #fff;">
+    <div class="roombg"></div>
+
+    </section>
     <!--
     <div class="container">
         <div class="roombg"></div>
