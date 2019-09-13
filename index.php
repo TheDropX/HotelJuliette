@@ -25,7 +25,7 @@ include_once "sidebar.php";
             <p class="first_p">Pagină în construcție...</p>
     </div>
 
-    <div class="container" style="text-align: center; padding: 20px;">
+    <div class="container" style="text-align: center; padding: 30px 20px;">
         <h1 style="color: #8e4905;">Bine ai venit la Hotel x!</h1>
         <p>Hotel de 4 stele din Iasi, Romania.</p>
     </div>
