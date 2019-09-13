@@ -34,19 +34,9 @@ include_once "sidebar.php";
     </section>
 
     <section style="background: #000000;">
-    <div class="roombg"></div>
-    <div class="bed"></div>
-    </section>
-    <!--
-    <div class="container">
         <div class="roombg"></div>
-
-        <div class="first_hm">
-            <h1 class="first_h1" data-aos="zoom-in">Test</h1>
-            <p class="first_p">Test</p>
-    </div>
-
-    </div>-->
+        <div class="bed"></div>
+    </section>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
