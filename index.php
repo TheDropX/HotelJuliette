@@ -38,9 +38,9 @@ Hotelul dispune și de 8 săli de conferință, printre care și sala Magnum, ce
     </div>
     </section>
     
-    <section style="background: #000000;">
+    <section style="background: #000000; position: relative;">
         <img src="../img/room.jpg" class="roombg"></div>
-        <img src="../img/bed.jpg"></div>
+        <img src="../img/bed.jpg" class="bed"></div>
     </section>
 
     <script src="assets/js/jquery.min.js"></script>
