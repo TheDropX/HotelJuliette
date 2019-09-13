@@ -35,7 +35,7 @@ include_once "sidebar.php";
 
     <section style="background: #000000;">
     <div class="roombg"></div>
-
+    <div class="bed"></div>
     </section>
     <!--
     <div class="container">

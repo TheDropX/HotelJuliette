@@ -29,6 +29,15 @@ body, html {
 
 }
 
+.bed {
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: 0px;
+    margin-right: 0px
+
+}
+
 .first_hm {
 
     text-align: center;
