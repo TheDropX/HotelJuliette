@@ -21,8 +21,8 @@ include_once "sidebar.php";
     </section>
 
     <section style="background: #000000; position: relative;">
-        <div class="roombg"></div>
-        <div class="bed"></div>
+        <img src="../img/room.jpg" class="roombg"></div>
+        <img src="../img/bed.jpg" class="bed"></div>
     </section>
 
     <section style="background: #fff;">
@@ -36,11 +36,6 @@ Toate camerele au aer condiționat, televizor LED conectat la canale naționale 
 Oaspeții hotelului se pot bucura de o masă cu specific internațional la unul dintre cele trei restaurante a la carte sau pot alege să se relaxeze în Sofia Sky Lounge situat la etajul 11, unde se pot bucura de o priveliște panoramică asupra orașului, cât și a Palatului Culturii.
 Hotelul dispune și de 8 săli de conferință, printre care și sala Magnum, ce pot găzdui întâlniri de afaceri sau diverse evenimente sociale.</p>
     </div>
-    </section>
-    
-    <section style="background: #000000; position: relative;">
-        <img src="../img/room.jpg" class="roombg"></div>
-        <img src="../img/bed.jpg" class="bed"></div>
     </section>
 
     <script src="assets/js/jquery.min.js"></script>
