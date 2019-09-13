@@ -21,6 +21,7 @@ body, html {
 
     position: relative;
     z-index: 0;
+    width: 100%;
     height: 720px;
     background-position: center;
     background-repeat: no-repeat;
