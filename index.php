@@ -34,8 +34,9 @@ include_once "sidebar.php";
     </section>
 
     <section style="background: #000000; position: relative;">
-        <div class="roombg"></div>
-        <div class="bed"></div>
+        <div class="roombg">
+            <div class="bed"></div>
+        </div>
     </section>
 
     <section style="background: #fff;">

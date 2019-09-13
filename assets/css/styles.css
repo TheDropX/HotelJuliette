@@ -33,7 +33,6 @@ body, html {
 
 .bed {
 
-    position: absolute;
     z-index: 5;
     background-image: url("../img/bed.jpg");
     height: 730px;
@@ -41,7 +40,10 @@ body, html {
     padding-top: 40px;
     padding-bottom: 40px;
     margin-left: 0px;
-    margin-right: 0px
+    margin-right: 0px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
