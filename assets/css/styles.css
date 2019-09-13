@@ -35,10 +35,9 @@ body, html {
     z-index: 5;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-left: 0px;
-    margin-right: 0px;
+    left: 1%;
+    top: 15%;
+    padding: 40px;
 
 }
 
