@@ -1,7 +1,7 @@
 <?php
-    include '../inc/db.inc.php';
-    include '../inc/echipa.inc.php';
-    include '../inc/showteam.inc.php';
+    include './inc/db.inc.php';
+    include './inc/echipa.inc.php';
+    include './inc/showteam.inc.php';
     include_once "sidebar.php";
 
     ini_set('display_errors', 1);
