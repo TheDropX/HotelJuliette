@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body style="background: #121212">
+<body style="background: #fff">
 
     <div class="bg"></div>
     <div class="first_hm">
@@ -31,6 +31,18 @@
                 $users = new showTeam();
                 $users->showAllTeam();
             ?>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="https://avatars1.githubusercontent.com/u/35700745?s=460&v=4" alt="Bologna">
+        <div class="card-body text-center">
+            <img class="avatar rounded-circle" src="..." alt="Bologna">
+            <h4 class="card-title">TheDrop.</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Website Developer</h6>
+            <p class="card-text">... </p>
+            <a href="#" class="btn btn-info">Follow</a>
+            <a href="#" class="btn btn-outline-info">Message</a>
+        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
