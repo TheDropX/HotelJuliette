@@ -36,6 +36,7 @@
     <div class="teamcard">
         <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
         <div class="teamcardname">Alex</div>
+        <div class="teamcardrole">Website Developer</div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
