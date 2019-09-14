@@ -90,3 +90,11 @@ body, html {
     left: 300px;
 
 }
+
+.teamcardimage {
+
+    border-radius: 50%;
+    vertical-align: middle;
+    height: 70%;
+
+}

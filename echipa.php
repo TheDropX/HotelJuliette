@@ -34,7 +34,7 @@
     </div>
 
     <div class="teamcard">
-    test
+        <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
