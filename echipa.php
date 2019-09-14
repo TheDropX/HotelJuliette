@@ -34,7 +34,7 @@
     </div>
 
     <div class="card">
-        <img class="card-img-top" src="https://i.imgur.com/ePGIcEg.jpg" alt="Bologna">
+        <div class="card-img-top"></div>
         <div class="card-body text-center">
             <img class="avatar rounded-circle" src="https://i.imgur.com/ePGIcEg.jpg" alt="Bologna">
             <h4 class="card-title">TheDrop.</h4>
