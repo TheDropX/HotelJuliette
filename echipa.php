@@ -21,8 +21,8 @@ include_once "sidebar.php";
     <div class="bg"></div>
     <div class="first_hm">
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
-            <p class="first_p">Pagină în construcție... <?php $test = $_ENV["MONGOUSER"];
-echo $test; ?></p>
+            <p class="first_p">Pagină în construcție... <?php $test = getenv("MONGOUSER");
+echo 'Test' . $test . '!'; ?></p>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
