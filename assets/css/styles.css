@@ -95,8 +95,8 @@ body, html {
 
     border-radius: 50%;
     vertical-align: middle;
-    height: 70%;
-    transform: translateY(20%);
+    height: 100%;
+    padding: 22px;
 
 }
 
