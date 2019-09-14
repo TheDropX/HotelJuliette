@@ -33,16 +33,8 @@
             ?>
     </div>
 
-    <div class="card">
-        <div class="card-img-top"></div>
-        <div class="card-body text-center">
-            <img class="avatar rounded-circle" src="https://i.imgur.com/ePGIcEg.jpg" alt="Bologna">
-            <h4 class="card-title">TheDrop.</h4>
-            <h6 class="card-subtitle mb-2 text-muted">Website Developer</h6>
-            <p class="card-text">... </p>
-            <a href="#" class="btn btn-info">Follow</a>
-            <a href="#" class="btn btn-outline-info">Message</a>
-        </div>
+    <div class="teamcard">
+    test
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
