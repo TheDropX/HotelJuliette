@@ -1,5 +1,8 @@
 <?php
-include_once "sidebar.php";
+    include 'inc/db.inc.php';
+    include 'inc/echipa.inc.php';
+    include 'inc/showteam.inc.php';
+    include_once "sidebar.php";
 ?>
 <html>
 
@@ -21,8 +24,11 @@ include_once "sidebar.php";
     <div class="bg"></div>
     <div class="first_hm">
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
-            <p class="first_p">Pagină în construcție... <?php $test = getenv('MONGOUSER');
-echo $test; ?></p>
+            <p class="first_p">Pagină în construcție...</p>
+            <?php
+                $users = new getAllTeam();
+                $users->showTeam();
+            ?>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
