@@ -28,8 +28,8 @@
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
             <p class="first_p">Pagină în construcție...</p>
             <?php
-                $users = new getAllTeam();
-                $users->showTeam();
+                $users = new showTeam();
+                $users->showAllTeam();
             ?>
     </div>
     <script src="assets/js/jquery.min.js"></script>
