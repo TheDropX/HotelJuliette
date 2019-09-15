@@ -42,11 +42,11 @@ class showTeam extends Echipa {
 
         $data0 = $this->getAllTeam();
 
-        foreach($data0 as $data) {
+        //foreach($data0 as $data) {
 
             echo $data['Role'];
 
-        }
+        //}
 
     }
 
