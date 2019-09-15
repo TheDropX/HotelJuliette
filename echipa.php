@@ -30,7 +30,7 @@ include_once "head.php";
         <div class="row">
         <?php 
         
-            $data0 = $this->getAllTeam();
+            $data0 = new getAllTeam();
 
             foreach($data0 as $data) {
 
