@@ -29,10 +29,8 @@ include_once "head.php";
     <div class="container">
         <div class="row">
         <?php 
-        
-            $data0 = new getAllTeam();
 
-            foreach($data0 as $data) {
+            foreach($users as $data) {
 
         ?>
 
