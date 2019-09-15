@@ -36,14 +36,14 @@
     <div class="container">
         <div class="row mt-5 justify-content-center">
 
-            <div class="teamcard mx-2 mb-3">
+            <div class="card card-custom mx-2 mb-3">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
                 <div class="teamcardname">Alex</div>
                 <div class="teamcardrole">Website Developer</div>
             </div>
 
 
-            <div class="teamcard mx-2 mb-3">
+            <div class="card card-custom mx-2 mb-3">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
                 <div class="teamcardname">Alex</div>
                 <div class="teamcardrole">Website Developer</div>
