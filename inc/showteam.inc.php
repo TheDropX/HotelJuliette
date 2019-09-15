@@ -44,7 +44,7 @@ class showTeam extends Echipa {
 
         //foreach($data0 as $data) {
 
-            echo $data0['Role'];
+            echo $data0[0]['Role'];
 
         //}
 
