@@ -80,10 +80,10 @@ body, html {
 
 .card-custom {
 
-    background: #1d212b9e;
+    background: #1d212b9e!important;
     width: 300px;
     height: 125px;
-    border: 2px solid #0079a0;
+    border: 2px solid #0079a0!important;
     border-radius: 8px;
     position: absolute;
     top: 300px;
