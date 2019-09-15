@@ -14,6 +14,30 @@ class showTeam extends Echipa {
 
     }
 
+    public function showName() {
+
+        $data0 = $this->getAllTeam();
+
+        foreach($data0 as $data) {
+
+            echo $data['Nume'];
+
+        }
+
+    }
+
+    public function showAdminValue() {
+
+        $data0 = $this->getAllTeam();
+
+        foreach($data0 as $data) {
+
+            echo $data['Admin'];
+
+        }
+
+    }
+
 }
 
 ?>
