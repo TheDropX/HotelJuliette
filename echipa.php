@@ -34,7 +34,7 @@
     </div>
 
     <div class="container">
-        <div class="row mt-5 justify-content-center">
+        <div class="row mt-5">
 
             <div class="card card-custom mx-2 mb-3">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
