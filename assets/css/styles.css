@@ -130,3 +130,46 @@ body, html {
     color: #7bd666;
 
 }
+
+.box-container {
+    border-radius: 10px;
+    margin-bottom: 2.5em;
+    padding: 1em;
+    position: relative
+}
+
+.column,.columns {
+    box-sizing: border-box;
+    float: left;
+    width: 100%
+}
+
+.row .column {
+    margin-left: 4%
+}
+
+.row .column:first-child {
+    margin-left: 0
+}
+
+.row .one-full.column {
+    width: 95%
+}
+
+.row .one-half.column {
+    width: 48%
+}
+
+.row .one-third.column {
+    width: 30.6666666667%
+}
+
+.row .one-fourth.column {
+    width: 21.9999999999%
+}
+
+.row::after {
+    clear: both;
+    content: '';
+    display: table
+}
