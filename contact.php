@@ -1,6 +1,3 @@
-<?php
-include_once "sidebar.php";
-?>
 <html>
 
 <?php
