@@ -24,14 +24,12 @@ include_once "head.php";
 
     <div class="container">
         <div class="row">
-        <?php 
-            
-            $test = $users->showAllTeam();
 
-            foreach($test as $data) {
-
-        ?>
-
+            <?php
+                $users = new showTeam();
+                $users->showAllTeam();
+            ?>
+    <!--
             <div class="card card-custom mx-2 mb-3">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
                 <div class="teamcardname">Alex</div>
@@ -46,6 +44,8 @@ include_once "head.php";
                 <div class="teamcardname">Maroan</div>
                 <div class="teamcardrole">Designer</div>
             </div>
+
+            -->
 
         </div>
     </div>
