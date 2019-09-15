@@ -110,6 +110,7 @@ body, html {
 .teamcardname {
 
     display: inline-block;
+    position: absolute;
     left: 42.7%;
     color: #bdbdbd;
     font-size: 23px;
