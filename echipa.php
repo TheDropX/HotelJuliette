@@ -37,14 +37,14 @@
         <div class="row mt-5 justify-content-center">
 
             <div class="card card-custom mx-2 mb-3">
-                <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="width: 30%">
+                <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%;">
                 <div class="teamcardname">Alex</div>
                 <div class="teamcardrole">Website Developer</div>
             </div>
 
 
             <div class="card card-custom mx-2 mb-3">
-                <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="width: 30%">
+                <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%;">
                 <div class="teamcardname">Alex</div>
                 <div class="teamcardrole">Website Developer</div>
             </div>
