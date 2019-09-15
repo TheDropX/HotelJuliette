@@ -35,12 +35,14 @@
 
     <div class="row">
 
+    <div class="col-sm-6">
     <div class="teamcard">
         <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
         <div class="teamcardname">Alex</div>
         <div class="teamcardrole">Website Developer</div>
     </div>
-
+    
+    <div class="col-sm-6">
     <div class="teamcard">
         <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
         <div class="teamcardname">Alex</div>
