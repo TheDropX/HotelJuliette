@@ -21,9 +21,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body style="background: #fff">
+<body style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(146,101,199,1) 0%, rgba(96,193,203,1) 100.2% );">
 
-    <div class="bg"></div>
     <div class="first_hm">
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
             <p class="first_p">Pagină în construcție...</p>
