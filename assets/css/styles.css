@@ -90,7 +90,6 @@ body, html {
     left: 300px;
     transition: top ease 0.5s;
     justify-content: space-around; 
-    display: flex;
 
 }
 
