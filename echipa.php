@@ -36,6 +36,7 @@ include_once "head.php";
                 <?php
                     $users = new showTeam();
                     $users->showRole();
+                    $users->showAdminValue();
                 ?>
                 </div>
             </div>
