@@ -8,7 +8,7 @@ class showTeam extends Echipa {
 
         foreach($data0 as $data) {
 
-            echo $data0[0]['Prenume'];
+            echo $data['Prenume'];
 
         }
 
