@@ -88,6 +88,14 @@ body, html {
     position: absolute;
     top: 300px;
     left: 300px;
+    transition: top ease 0.5s;
+    justify-content: space-around; 
+
+}
+
+.teamcard:hover {
+
+    top: -10px;
 
 }
 
