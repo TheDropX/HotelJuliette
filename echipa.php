@@ -30,7 +30,7 @@ include_once "head.php";
         <div class="row">
         <?php 
 
-            foreach($users as $data) {
+            foreach($users->showAllTeam() as $data) {
 
         ?>
 
