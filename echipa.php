@@ -35,7 +35,7 @@
 
     <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="teamcard">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
                 <div class="teamcardname">Alex</div>
@@ -43,7 +43,7 @@
             </div>
         </div> 
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div class="teamcard">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
                 <div class="teamcardname">Alex</div>
@@ -52,7 +52,7 @@
         </div>
 
     </div>
-    
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
