@@ -1,9 +1,14 @@
-<?php
-include_once "sidebar.php";
-?>
 <html>
 
+<?php
+include_once "head.php";
+?>
+
 <body style="background: #000000;">
+
+    <?php
+    include_once "sidebar.php";
+    ?>
 
     <section>
     <div class="bg"></div>
