@@ -6,47 +6,23 @@ class showTeam extends Echipa {
 
         $data0 = $this->getAllTeam();
 
-        //foreach($data0 as $data) {
+        foreach($data0 as $data) {
 
-            echo $data0['Prenume'];
+            echo '
+            <div class="card card-custom mx-2 mb-3">
+            <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
+            <div class="teamcardname">
+            ' . $data['Prenume'] . '
+            </div>
+            <div class="teamcardrole">
+            ' . $data['Role'] . '
+            </div>
+            </div>
+            ';
 
-        //}
+            //echo $data['Prenume'];
 
-    }
-
-    public function showName() {
-
-        $data0 = $this->getAllTeam();
-
-        //foreach($data0 as $data) {
-
-            echo $data0[0]['Nume'];
-
-        //}
-
-    }
-
-    public function showAdminValue() {
-
-        $data0 = $this->getAllTeam();
-
-        //foreach($data0 as $data) {
-
-            echo $data0[0]['Admin'];
-
-        //}
-
-    }
-
-    public function showRole() {
-
-        $data0 = $this->getAllTeam();
-
-        //foreach($data0 as $data) {
-
-            echo $data0[0]['Role'];
-
-        //}
+        }
 
     }
 
