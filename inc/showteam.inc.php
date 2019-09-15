@@ -38,6 +38,18 @@ class showTeam extends Echipa {
 
     }
 
+    public function showRole() {
+
+        $data0 = $this->getAllTeam();
+
+        foreach($data0 as $data) {
+
+            echo $data['Role'];
+
+        }
+
+    }
+
 }
 
 ?>
