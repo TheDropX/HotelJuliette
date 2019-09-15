@@ -14,6 +14,10 @@ include_once "head.php";
 
 <body style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(146,101,199,1) 0%, rgba(96,193,203,1) 100.2% );">
 
+    <?php
+    include_once "sidebar.php";
+    ?>
+
     <div class="first_hm">
             <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
             <p class="first_p">Pagină în construcție...</p>
