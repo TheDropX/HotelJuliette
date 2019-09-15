@@ -29,8 +29,10 @@ include_once "head.php";
     <div class="container">
         <div class="row">
         <?php 
+            
+            $test = $users->showAllTeam();
 
-            foreach($users->showAllTeam() as $data) {
+            foreach($test as $data) {
 
         ?>
 
