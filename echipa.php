@@ -33,9 +33,7 @@
             ?>
     </div>
 
-    <div class="box-container row">
-
-    <div class="one-full column aos-init aos-animate" style="display: flex;" data-aos="fade-right" data-aos-duration="2000">
+    <div class="row">
 
     <div class="teamcard">
         <img src="https://i.imgur.com/ePGIcEg.jpg" class="teamcardimage">
