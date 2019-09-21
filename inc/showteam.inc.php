@@ -9,7 +9,7 @@ class showTeam extends Echipa {
         foreach($data0 as $data) {
 
             echo '
-            <div class="card card-custom mx-2 mb-3">
+            <div class="card card-custom mx-auto">
             <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
             <div class="teamcardname">
             ' . $data['Prenume'] . '
