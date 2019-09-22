@@ -91,9 +91,9 @@ body, html {
 
 }
 
-.teamcard:hover {
+.card-custom:hover {
 
-    top: 290px;
+    top: -5px;
 
 }
 
