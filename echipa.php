@@ -18,6 +18,7 @@ include_once "head.php";
     ?>
 
     <div class="container">
+    <h1 class="text-center position-relative" style="position: relative; top: 250px;">Echipa tehnică</h1>
         <div class="row">
 
             <?php
