@@ -85,8 +85,8 @@ body, html {
     height: 125px;
     border: 2px solid #0079a0!important;
     border-radius: 8px;
-    top: 300px;
-    left: 300px;
+    top: 30vh;
+    left: 0vw;
     transition: top ease 0.5s;
     justify-content: space-around; 
 
