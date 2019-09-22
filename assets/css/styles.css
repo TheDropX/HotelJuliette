@@ -87,7 +87,8 @@ body, html {
     border-radius: 8px;
     top: 30vh;
     transition: top ease 0.5s;
-    justify-content: space-around; 
+    justify-content: space-around;
+	margin-bottom: 25px;
 
 }
 
