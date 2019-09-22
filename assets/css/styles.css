@@ -87,7 +87,10 @@ body, html {
     border-radius: 8px;
     transition: top ease 0.5s;
     justify-content: space-around;
-	margin-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    transition: top ease 0.2s;
+    top: 0;
 
 }
 
