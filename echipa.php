@@ -17,8 +17,8 @@ include_once "head.php";
     include_once "sidebar.php";
     ?>
 
-    <div class="container position-relative">
-    <h1 class="text-center position-relative" style="position: relative;">Echipa tehnică</h1>
+    <div class="container position-relative" style="top: 15vh;">
+    <h1 class="text-center position-relative">Echipa tehnică</h1>
         <div class="row">
 
             <?php
