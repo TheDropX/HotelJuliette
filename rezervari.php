@@ -17,11 +17,18 @@ include_once "head.php";
     include_once "sidebar.php";
     ?>
 
-    <div class="bg"></div>
-    <div class="first_hm">
-            <h1 class="first_h1" data-aos="zoom-in">Firmă de exercițiu</h1>
-            <p class="first_p">Pagină în construcție...</p>
+<div class="container position-relative" style="top: 15vh;">
+    <h1 class="text-center position-relative" style="padding: 20px;">Camere - test.</h1>
+        <div class="row">
+
+            <?php
+                $users = new showRooms();
+                $users->showAllRooms();
+            ?>
+
+        </div>
     </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/navbar.js"></script>
