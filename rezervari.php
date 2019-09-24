@@ -1,3 +1,10 @@
+<?php
+    include './inc/db.inc.php';
+    include './inc/camere.inc.php';
+    include './inc/showRooms.inc.php';
+
+    ini_set('display_errors', 1);
+?>
 <html>
 
 <?php

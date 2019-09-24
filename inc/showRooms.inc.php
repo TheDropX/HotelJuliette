@@ -2,7 +2,7 @@
 
 class showRooms extends Camere {
 
-    public function showRooms() {
+    public function showAllRooms() {
 
         $data0 = $this->getAllRooms();
 
