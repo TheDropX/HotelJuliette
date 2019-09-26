@@ -233,3 +233,20 @@ p {
     margin-top: 25px;
 
 }
+
+@media only screen and (max-width: 600px) {
+    .room {
+
+        height: 400px;
+        width: 300px;
+        border: thin solid #2D3142;
+        background: #f0f0f0;
+        color: black;
+        align-content: center;
+        text-align: center;
+        margin: auto;
+        margin-top: 25px;
+        display: inline-block;
+    
+    }
+  }
