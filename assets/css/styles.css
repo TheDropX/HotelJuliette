@@ -197,6 +197,13 @@ p {
 
 }
 
+.rooms {
+
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
 .room {
 
     height: 500px;
