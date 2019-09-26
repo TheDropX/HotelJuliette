@@ -111,6 +111,82 @@ include_once "head.php";
             </div>
         </div>
 
+        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <div class="room_type">CAMERA PREMIUM</div>
+            <div class="info">
+            <p>Pret pe noapte: 200 RON</p>
+            <p>Paturi: 3</p>
+            <p>Băi: 2</p>
+            <p>Capacitate: 2x adulti, 3x copii</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <div class="room_type">CAMERA PREMIUM</div>
+            <div class="info">
+            <p>Pret pe noapte: 200 RON</p>
+            <p>Paturi: 3</p>
+            <p>Băi: 2</p>
+            <p>Capacitate: 2x adulti, 3x copii</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <div class="room_type">CAMERA PREMIUM</div>
+            <div class="info">
+            <p>Pret pe noapte: 200 RON</p>
+            <p>Paturi: 3</p>
+            <p>Băi: 2</p>
+            <p>Capacitate: 2x adulti, 3x copii</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
+
+        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <div class="room_type">CAMERA PREMIUM</div>
+            <div class="info">
+            <p>Pret pe noapte: 200 RON</p>
+            <p>Paturi: 3</p>
+            <p>Băi: 2</p>
+            <p>Capacitate: 2x adulti, 3x copii</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
+
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
