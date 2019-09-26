@@ -36,7 +36,7 @@ include_once "head.php";
     <div class="rooms">
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -55,7 +55,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -74,7 +74,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -93,7 +93,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -112,7 +112,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -131,7 +131,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -150,7 +150,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
@@ -169,7 +169,7 @@ include_once "head.php";
         </div>
 
         <div class="room">
-            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="width: 400px;">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
             <div class="room_type">CAMERA PREMIUM</div>
             <div class="info">
             <p>Pret pe noapte: 200 RON</p>
