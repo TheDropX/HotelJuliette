@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
     <link rel="stylesheet" href="assets/css/navbar1.css">
     <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/styles.css?version=46">
+    <link rel="stylesheet" href="assets/css/styles.css?version=47">
     <script src="https://kit.fontawesome.com/a7e58d64e4.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
