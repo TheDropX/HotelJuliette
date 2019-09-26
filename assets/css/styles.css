@@ -239,7 +239,7 @@ p {
     .room {
 
         height: 400px;
-        width: 300px;
+        width: 325px;
         border: thin solid #2D3142;
         background: #f0f0f0;
         color: black;
@@ -253,8 +253,9 @@ p {
 
     .button {
         display: inline-flex;
+        margin: 0;
         height: 40px;
-        width: 130px;
+        width: 145px;
         border: 2px solid #808080;
         color: #808080;
         text-transform: uppercase;
