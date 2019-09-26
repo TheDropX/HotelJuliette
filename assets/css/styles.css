@@ -134,7 +134,7 @@ body, html {
 
 a {
     color: #808080;;
-    text-decoration: none;
+    text-decoration: none!important;
     letter-spacing: 1px;
 }
 
@@ -194,7 +194,7 @@ p {
 #button-3:hover a {
 
     color: #2D3142;
-    
+
 }
 
 .room {
