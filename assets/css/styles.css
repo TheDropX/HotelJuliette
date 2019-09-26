@@ -131,3 +131,94 @@ body, html {
     color: #7bd666;
 
 }
+
+a {
+    color: #808080;;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+p {
+
+    line-height: 0.5;
+
+}
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #808080;;
+    margin: 50px 20px 20px 20px;
+    color: #808080;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+}
+
+#circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+#button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+}
+
+#button-3:hover a {
+
+    color: #2D3142;
+    
+}
+
+.room {
+
+    height: 500px;
+    width: 400px;
+    border: thin solid #2D3142;
+    background: #f0f0f0;;
+    color: black;
+    align-content: center;
+    text-align: center;
+
+}
+
+.room_type {
+
+    color: gray;
+    font-size: 25px;
+    margin-top: 10px;
+
+}
+
+.info {
+
+    margin-top: 25px;
+
+}
