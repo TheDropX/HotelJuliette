@@ -214,7 +214,8 @@ p {
     color: black;
     align-content: center;
     text-align: center;
-    margin: 25px;
+    margin: auto;
+    display: inline-block;
 
 }
 
