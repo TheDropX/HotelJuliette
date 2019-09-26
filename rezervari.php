@@ -11,7 +11,7 @@
 include_once "head.php";
 ?>
 
-<body style="background: #121212">
+<body style="background: white;">
 
     <?php
     include_once "sidebar.php";
