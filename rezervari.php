@@ -205,6 +205,25 @@ include_once "head.php";
                 <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
             </div>
         </div>
+		
+		        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
+            <div class="room_type">CAMERA BUSINESS</div>
+            <div class="info">
+            <p>Pret pe noapte: 350 RON</p>
+            <p>Paturi: 5</p>
+            <p>Băi: 2</p>
+            <p>Capacitate: 4x adulti, 4x copii</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
 
         <div class="room">
             <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
