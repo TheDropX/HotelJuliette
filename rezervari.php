@@ -167,6 +167,44 @@ include_once "head.php";
                 <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
             </div>
         </div>
+		
+		        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
+            <div class="room_type">CAMERA ECONOMIC</div>
+            <div class="info">
+            <p>Pret pe noapte: 90 RON</p>
+            <p>Paturi: 1</p>
+            <p>Băi: 1</p>
+            <p>Capacitate: 2x adulti</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
+		
+		        <div class="room">
+            <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
+            <div class="room_type">CAMERA BASIC</div>
+            <div class="info">
+            <p>Pret pe noapte: 100 RON</p>
+            <p>Paturi: 2</p>
+            <p>Băi: 1</p>
+            <p>Capacitate: 2x adulti, 1x copil</p>
+            </div>  
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-info-circle"></i>&nbsp;Afla mai multe</a>
+            </div>
+            <div class="button" id="button-3">
+                <div id="circle"></div>
+                <a href="#"><i class="fas fa-suitcase-rolling"></i>&nbsp;Rezervare</a>
+            </div>
+        </div>
 
         <div class="room">
             <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
