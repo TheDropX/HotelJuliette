@@ -17,7 +17,7 @@ include_once "head.php";
     include_once "sidebar.php";
     ?>
 
-    <div class="container position-relative" style="top: 15vh;">
+    <div class="container position-relative" style="top: 10vh;">
 
         <?php
             $users = new showTeam();
