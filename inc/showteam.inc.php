@@ -16,20 +16,20 @@ class showTeam extends Echipa {
 
         }
 
-        foreach($data0 as $data) {
+        foreach($data0 as $dataa) {
             
             echo '
             <script>
-                var cv = document.getElementById("' . $data['Role'] . '");
-                console.log("' . $data['Role'] . '");
+                var cv = document.getElementById("' . $dataa['Role'] . '");
+                console.log("' . $dataa['Role'] . '");
                 cv.innerHTML += `
                 <div class="card card-custom mx-auto">
                 <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
                     <div class="teamcardname">
-                    ' . $data['Prenume'] . '
+                    ' . $dataa['Prenume'] . '
                     </div>
                     <div class="teamcardrole">
-                    ' . $data['Role'] . '
+                    ' . $dataa['Role'] . '
                     </div>
                 </div>
                 `;
