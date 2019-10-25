@@ -7,18 +7,18 @@ class showTeam extends Echipa {
         $data0 = $this->getAllTeam();
         $data1 = $this->getAllRoles();
 
-        echo '
-        <script>
-
-        console.log("Test");
-        console.log("' . $data0['Role'] . '");
-
-        </script>
-        ';
-
-
         foreach($data1 as $data) {
 
+            echo '
+            <script>
+
+            var team = document.createElement("div");
+            team.setAttribute("id", "' . $data['Role'] . '");
+            console.log("' . $dataa['Role'] . '");
+            document.body.appendChild(team);
+    
+            </script>
+            ';
             echo '
             <div style="padding: 20px" id="' . $data['Role'] . '">
             <h1 class="text-center position-relative" style="padding: 20px;" id="' . $data['Role'] . '">' . $data['Role'] . '</h1>
