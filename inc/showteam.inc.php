@@ -7,6 +7,16 @@ class showTeam extends Echipa {
         $data0 = $this->getAllTeam();
         $data1 = $this->getAllRoles();
 
+        echo '
+        <script>
+
+        console.log("Test");
+        console.log("' . $data0['Role'] . '");
+
+        </script>
+        ';
+
+
         foreach($data1 as $data) {
 
             echo '
