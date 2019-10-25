@@ -23,7 +23,7 @@ include_once "head.php";
             $users = new showTeam();
             $users->showAllTeam();
         ?>
-        
+        </div>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
