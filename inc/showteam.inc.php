@@ -20,7 +20,7 @@ class showTeam extends Echipa {
             
             echo '
             <script>
-                var cv = document.getElementById(' . $data['Role'] . ');
+                var cv = document.getElementById("' . $data['Role'] . '");
 
                 cv.innerHTML += "
                 <div class="card card-custom mx-auto">
