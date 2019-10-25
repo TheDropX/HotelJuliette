@@ -12,16 +12,17 @@ class showTeam extends Echipa {
             echo '
             <script>
 
-            var team = document.createElement("div");
+            var team = document.getElementById("' . $data['Role'] . '");
             team.setAttribute("id", "' . $data['Role'] . '");
             console.log("' . $dataa['Role'] . '");
-            document.body.appendChild(team);
     
             </script>
             ';
+
             echo '
             <div style="padding: 20px" id="' . $data['Role'] . '">
-            <h1 class="text-center position-relative" style="padding: 20px;" id="' . $data['Role'] . '">' . $data['Role'] . '</h1>
+                <h1 class="text-center position-relative" style="padding: 20px;">' . $data['Role'] . '</h1>
+            </div>
             ';
 
         }
