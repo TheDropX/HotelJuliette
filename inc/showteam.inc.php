@@ -14,14 +14,14 @@ class showTeam extends Echipa {
 
             var team = document.getElementById("' . $data['Role'] . '");
             team.setAttribute("id", "' . $data['Role'] . '");
-            console.log("' . $dataa['Role'] . '");
     
             </script>
             ';
 
             echo '
-            <div style="padding: 20px" id="' . $data['Role'] . '">
+            <div style="padding: 20px">
                 <h1 class="text-center position-relative" style="padding: 20px;">' . $data['Role'] . '</h1>
+                <div class="row"  id="' . $data['Role'] . '"></div>
             </div>
             ';
 
