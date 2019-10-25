@@ -19,7 +19,7 @@ include_once "head.php";
 
     <div class="container position-relative" style="top: 15vh;">
     <?php
-        $roles = new showTeams();
+        $roles = new showTeam();
         $roles->showAllRoles();
     ?>
         <div class="row">
