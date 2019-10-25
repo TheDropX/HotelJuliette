@@ -18,14 +18,12 @@ include_once "head.php";
     ?>
 
     <div class="container position-relative" style="top: 15vh;">
-        <div class="row">
 
-            <?php
-                $users = new showTeam();
-                $users->showAllTeam();
-            ?>
-
-        </div>
+        <?php
+            $users = new showTeam();
+            $users->showAllTeam();
+        ?>
+        
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
