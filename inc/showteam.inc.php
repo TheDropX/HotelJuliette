@@ -10,8 +10,8 @@ class showTeam extends Echipa {
         foreach($data1 as $data) {
 
             echo '
-            <div style="padding: 20px; width: 100%">
-            <h1 class="text-center position-relative" style="padding: 20px;">' . $data['Role'] . '</h1>
+            <div style="padding: 20px" id="' . $data['Role'] . '">
+            <h1 class="text-center position-relative" style="padding: 20px;" id="' . $data['Role'] . '">' . $data['Role'] . '</h1>
             ';
 
         }
@@ -19,15 +19,21 @@ class showTeam extends Echipa {
         foreach($data0 as $data) {
             
             echo '
-            <div class="card card-custom mx-auto">
-            <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
-            <div class="teamcardname">
-            ' . $data['Prenume'] . '
-            </div>
-            <div class="teamcardrole">
-            ' . $data['Role'] . '
-            </div>
-            </div>
+            <script>
+                var cv = document.getElementById(' . $data['Role'] . ');
+
+                cv.innerHTML += "
+                <div class="card card-custom mx-auto">
+                <img src="https://i.imgur.com/ePGIcEg.jpg" class="rounded-circle" style="position: absolute; width: 30%; left: 15px;">
+                    <div class="teamcardname">
+                    ' . $data['Prenume'] . '
+                    </div>
+                    <div class="teamcardrole">
+                    ' . $data['Role'] . '
+                    </div>
+                </div>
+                ";
+            </script>
             ';
 
         }
