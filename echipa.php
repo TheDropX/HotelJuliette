@@ -18,7 +18,10 @@ include_once "head.php";
     ?>
 
     <div class="container position-relative" style="top: 15vh;">
-    <h1 class="text-center position-relative" style="padding: 20px;">Echipa tehnică</h1>
+    <?php
+        $roles = new showTeams();
+        $roles->showAllRoles();
+    ?>
         <div class="row">
 
             <?php
