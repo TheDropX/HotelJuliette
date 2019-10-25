@@ -5,6 +5,15 @@ class showTeam extends Echipa {
     public function showAllTeam() {
 
         $data0 = $this->getAllTeam();
+        $data1 = $this->getAllRoles();
+
+        foreach($data1 as $data) {
+
+            echo '
+            <h1 class="text-center position-relative" style="padding: 20px;">' . $data['Role'] . '</h1>
+            ';
+
+        }
 
         foreach($data0 as $data) {
 
@@ -23,20 +32,6 @@ class showTeam extends Echipa {
             ';
 
             //echo $data['Prenume'];
-
-        }
-
-    }
-
-    public function showAllRoles() {
-
-        $data1 = $this->getAllRoles();
-
-        foreach($data1 as $data) {
-
-            echo '
-            <h1 class="text-center position-relative" style="padding: 20px;">' . $data['Role'] . '</h1>
-            ';
 
         }
 

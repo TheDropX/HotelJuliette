@@ -18,10 +18,6 @@ include_once "head.php";
     ?>
 
     <div class="container position-relative" style="top: 15vh;">
-    <?php
-        $roles = new showTeam();
-        $roles->showAllRoles();
-    ?>
         <div class="row">
 
             <?php
