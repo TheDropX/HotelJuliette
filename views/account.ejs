@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Hotel Julitte - <%= title %></title>
+
+    <% include ./partials/meta.ejs %>
+
+    <link rel="stylesheet" href="assets/css/style.css?v=6" />
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+
+    <% include partials/navbar.ejs %>
+
+    <section class="content">
+      
+      <div class="title-text">
+        Setările contului
+      </div>
+
+      <% if (!user) return res.redirect("/login"); %>
+
+      <h2 style="color: black; line-height: 0;">Bună ziua, <%= user.displayName %>.</h2>
+      <h2 style="color: black;">Vă rog să selectați/completați câmpurile de mai jos.</h2>
+      <div class="inputs">
+        <form action="/editaccount" method="post" enctype="multipart/form-data">
+          <div class="group">
+          <p>Compartiment</p>
+            <select name="compartiment">
+              <option selected="selected">Selectați</option>
+              <% roles.forEach((role) => { %>
+
+                <option value="<%= role.Name %>"><%= role.Name %></option>
+
+              <% }); %>
+            </select>
+          </div>
+          <div class="group">
+            <p>Post</p>
+            <input type="text" class="form-control" name="post" id="post" placeholder="Postul dvs. (Ex: Specialist IT)" required>
+          </div>
+          <button type="submit" class="buton">Salvare</button>
+          <a href="/logout" class="buton red">Logout</a>
+        </form>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="copyright">
+        &copy; Copyright 2019 Hotel Julitte - All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>

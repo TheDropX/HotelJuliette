@@ -1,0 +1,38 @@
+<nav class="navbar">
+    <% 
+    let path;
+    if(title == 'Camera') path = "../assets/img/logo.png";
+    else path = "./assets/img/logo.png";
+     %>
+        <img src="<%= path %>">
+    <a href="/">JULIETTE</a>
+
+    <div class="links">
+        <ul>
+            <li class="nav-item">
+                <a href="/rezervari">
+                    <ion-icon name="ios-bed"></ion-icon>
+                    Rezervări
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/restaurant">
+                    <ion-icon name="pizza"></ion-icon>
+                    Restaurant
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/echipa">
+                    <ion-icon name="contacts"></ion-icon> 
+                    Echipă
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

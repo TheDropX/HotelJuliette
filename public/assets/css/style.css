@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar {
+
+    position: fixed;
+    min-height: 70px;
+    padding: .4rem 0;
+    left: 0;
+    right: 0;
+    background-color: #333333;
+    z-index: 50;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+.navbar ion-icon {
+
+    font-size: 25px;
+    padding: 3px;
+
+}
+
+.links {
+
+    position: fixed;
+    right: 0;
+    padding-right: 5rem;
+
+}
+
+.links ul {
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.links .nav-item {
+
+    -webkit-align-self: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0 !important;
+    margin: 0rem .65rem !important;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
+
+.links .nav-item:hover {
+
+    transform: scale(1.1);
+}
+
+nav img {
+
+    width: 50px;
+    padding-left: 5.5rem;
+
+}
+
+nav a {
+
+    display: flex;
+    color: white;
+    font-weight: 700;
+    vertical-align: middle;
+    align-items: center;
+    padding-left: 0.5rem;
+
+}
+
+.first {
+
+    z-index: 2;
+
+}
+
+.video {
+
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    z-index: 2;
+
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.juliette {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: rgb(0, 0, 0, 0.8);
+    opacity: 0.8;
+    z-index: 10;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    z-index: 5;
+
+}
+
+.info {
+
+    display: inline-block;
+    padding: 30rem;
+
+}
+
+.info h1 {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 4.25rem;
+    font-weight: 700;
+
+}
+
+.info p {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+
+}
+
+.arrow {
+
+    position: absolute;
+    bottom: 125px;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: rgba(80, 80, 80, 0.5);
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+}
+
+.arrow ion-icon {
+
+    padding-top: 1rem;
+
+}
+
+.footer {
+    
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    background-color: #333333;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content {
+
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+
+
+}
+
+.title-text {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    padding-bottom: 3rem;
+    color: black;
+
+}
+
+
+.motiv  {
+
+    width: 40rem;
+    padding-left: 27rem;
+    padding-bottom: 3rem;
+
+}
+
+.numar {
+
+    font-size: 32px;
+    float: left;
+    color: black;
+    padding: 1rem;
+    padding-right: 2rem;
+    width: 20px;
+    font-weight: 700;
+
+}
+
+.text {
+
+    text-align: left;
+    width: 30rem;
+
+}
+
+.title {
+
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: .5rem;
+
+}
+
+.description {
+
+    color: #767676;
+
+}
+
+.motive {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.img {
+
+    float: right;
+    padding-top: 2.5rem;
+    padding-right: 27rem;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    width: 25%;
+    -webkit-align-self: center;
+    align-self: center;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+
+}
+
+.row {
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
+
+}
+
+.echipa {
+
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+
+}
+
+.compartiment {
+
+    margin: auto;
+    width: 75%;
+    padding-bottom: 5rem;
+
+}
+
+.team-info {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: white;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    align-items: center;
+    padding: 3rem;
+
+}
+
+.team-info h1, .team-info p {
+
+    line-height: 0;
+
+}
+
+.team-info .team-role {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: white;
+
+}
+
+.team-info .team-description {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: #b1b1b1;
+
+}
+
+.membru {
+
+    position: relative;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    top: 0;
+    transition: top ease 0.5s;
+    -moz-transition: top ease 0.5s; /* Firefox 4 */
+    -webkit-transition: top ease 0.5s; /* Safari and Chrome */
+    -o-transition: top ease 0.5s; /* Opera */
+    -ms-transition: top ease 0.5s; /* Explorer 10 */
+
+}
+
+.membru:hover {
+
+    top: -5px;
+
+}
+
+.profile-picture {
+
+    border-radius: 50%;
+    width: 100px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.name {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: #ffffff;
+
+}
+
+.role {
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: #b1b1b1;
+
+}
+
+.roles {
+
+    position: absolute;
+    bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+}
+
+.roles ion-icon {
+
+    font-size: 24px!important;
+
+}
+
+.rezervari {
+
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+
+}
+
+.error-img {
+
+    width: 250px;
+
+}
+
+.error-h {
+    display: flex;
+    justify-content: center;
+}
+
+.error-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.error-text {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    color: black;
+}
+
+.error {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.rooms {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+
+}
+
+.room {
+
+    height: 500px;
+    width: 400px;
+    border: thin solid #2D3142;
+    background: #f0f0f0;
+    color: black;
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 25px;
+    display: inline-block;
+
+}
+
+.room_type {
+
+    color: gray;
+    font-size: 25px;
+    margin-top: 10px;
+
+}
+
+.room-info {
+
+    margin-top: 25px;
+
+}
+
+.room-info a {
+    color: #808080;;
+    text-decoration: none!important;
+    letter-spacing: 1px;
+}
+
+.room-info p {
+
+    line-height: 0.5;
+
+}
+
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #808080;
+    margin: 50px 20px 20px 20px;
+    color: #808080!important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-3 a {
+    position: relative;
+    color: #808080!important;
+    transition: all .45s ease-Out;
+}
+
+#circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+}
+
+#button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+}
+
+#button-3:hover a {
+
+    color: #2D3142;
+
+}
+
+.buton {
+    display: inline-block;
+    font: 400 13.3333px Arial;
+    color: white;
+    background-color: #2a6100;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.red {
+    background-color: #8a0000!important;
+}
+
+.inputs {
+    display: flex;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputs select {
+    width: 250px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    color: black;
+    transition: all ease 1s;
+    margin-bottom: 10px;
+}
+
+.inputs select:hover {
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px 0 rgba(46, 204, 113, 0.3);
+    color: black;
+}
+
+input {
+    display: block;
+    margin: auto;
+    width: 350px;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    margin-bottom: 15px;
+}
+
+.form-row {
+
+    position: relative;
+
+}
+
+
+
+a.fb {
+    font-family: Lucida Grande, Helvetica Neue, Helvetica, Arial, sans-serif;
+    display: inline-block;
+    font-size: 14px;
+    padding: 13px 30px 15px 44px;
+    background: #3A5A97;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,20,.4);
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+    border-radius: 5px;
+}
+
+.connect:before {
+    display: inline-block;
+    position: relative;
+    background-image: url("../img/fb.png");
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    text-indent: -9999px;
+    text-align: center;
+    width: 29px;
+    line-height: 23px;
+    margin: -8px 7px -7px -30px;
+    padding: 2 10px 0 0;
+    content: "f";
+}
+
+.group p {
+    color: black;
+    line-height: 0;
+    font-weight: 800;
+}
+
+.camera {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.camera-info {
+    display: inline-block;
+    background-color: rgb(0, 0, 0, 0.9);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.camera-info img {
+    float: left;
+    width: 35%;
+    margin-left: 10rem;
+}
+
+.camera-info h1 {
+    float: left;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 2.5rem;
+}
+
+.camera-info p {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    margin: 0;
+}
+
+.camera-info .other-images img {
+    width: 10%;
+    margin-left: 4rem;
+    filter: brightness(60%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+
+    iframe {
+
+        width: 100%;
+
+    }
+    
+    .text {
+    
+        width: 100%;
+    
+    }
+
+    .content {
+    
+        width: 100%;
+        text-align: center;
+        vertical-align: top;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        border: 2px solid red;
+
+    }
+    
+    .motiv {
+
+        width: 100%;
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+    
+    }
+    
+    .img {
+
+        border: 2px solid black;
+        border-style: groove;
+        width: 80%;
+        float: none;
+        padding-right: 0rem;
+        padding-top: 0rem;
+
+    }
+
+}

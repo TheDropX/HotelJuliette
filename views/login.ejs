@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Hotel Julitte - <%= title %></title>
+
+    <% include ./partials/meta.ejs %>
+
+    <link rel="stylesheet" href="assets/css/style.css?v=6" />
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+
+    <% include partials/navbar.ejs %>
+
+    <section class="content">
+      
+      <div class="title-text">
+        Înregistrare - Hotel Juliette
+      </div>
+      <% if (!user) { %>
+        <a href="/auth/facebook" class="fb connect">Sign in with Facebook</a>
+      <% } else { %>
+        <h2 style="color: black;">Salut, <%= user.displayName %>. Se pare că ești logat deja.</h2>
+      <% } %>
+
+    </section>
+
+    <footer class="footer">
+      <div class="copyright">
+        &copy; Copyright 2019 Hotel Julitte - All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>

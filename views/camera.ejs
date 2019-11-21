@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Hotel Juliette - <%= title %></title>
+
+    <% include ./partials/meta.ejs %>
+
+    <link rel="stylesheet" href="../assets/css/style.css?v=6" />
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+
+    <% include ./partials/navbar.ejs %>
+
+    <section class="camera">
+
+        <div class="camera-info">
+            <img src="../assets/img/<%= roomData[0].MainImage %>.jpg" id="main">
+            <h1>Camera <%= roomData[0].Type %></h1>
+            <p><%= roomData[0].Description %></p>
+            <div class="other-images">
+              <p style="margin-top: 1rem; margin-bottom: 1rem;">- Alte imagini -</p>
+              <img src="../assets/img/<%= roomData[0].MainImage %>_2.jpg" id="other" onclick="changeImage()">
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+      <div class="copyright">
+        &copy; Copyright 2019 Hotel Julitte - All Rights Reserved
+      </div>
+    </footer>
+
+    <script language="javascript">
+        function changeImage() {
+
+          let lastImage, opacity = 75, big, small;
+
+          big = document.getElementById("main");
+          small = document.getElementById("other");
+
+          lastImage = big.src;
+
+          unfade(big, small.src);
+          unfade(small, lastImage);
+
+        }
+        
+        function fade(element, img) {
+          var op = 1;  // initial opacity
+          element.src = img;
+          var timer = setInterval(function () {
+            if (op <= 0.1){
+              clearInterval(timer);
+              element.style.display = 'none';
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op -= op * 0.1;
+          }, 10);
+        }
+
+        function unfade(element, img) {
+            var op = 0.1;  // initial opacity
+            element.src = img;
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1){
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, 10);
+        }
+
+    </script>
+  </body>
+</html>
