@@ -56,6 +56,14 @@ app.get("/login", getLoginPage);
 app.get("/camera/:type", getRoomPage);
 app.get("/account", getAccountPage);
 
+app.get("/privacy", function(req, res) {
+
+  res.render('policy.ejs', {
+    title: "Privacy Policy"
+  });
+  
+});
+
 app.post('/editaccount', editAccount);
 
 passport.serializeUser(function(user, done) {

@@ -720,6 +720,10 @@ a.fb {
     border-radius: 5px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .connect:before {
     display: inline-block;
     position: relative;
