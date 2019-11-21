@@ -720,8 +720,11 @@ a.fb {
     border-radius: 5px;
 }
 
-ul {
-    list-style-type: none;
+.policy {
+    color: black;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .connect:before {
