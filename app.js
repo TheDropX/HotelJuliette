@@ -11,8 +11,8 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const config = require("./config/config");
 const fs = require('fs');
-const key = fs.readFileSync(process.env.KEY_PATH);
-const cert = fs.readFileSync(process.env.CERT_PATH);
+const key = fs.readFileSync(process.env.KEY_PATH.toString());
+const cert = fs.readFileSync(process.env.CERT_PATH.toString());
 
 const { getHomePage } = require("./routes/index");
 const { getTeamPage } = require("./routes/team");
