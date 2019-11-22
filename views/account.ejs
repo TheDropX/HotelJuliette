@@ -13,6 +13,24 @@
 
     <% include partials/navbar.ejs %>
 
+    <% 
+
+    let compartiment, post, instagram;
+
+    accounts.forEach((account) => {
+      if(account.User_ID == user.id) {
+        instagram = account.Instagram;
+      }
+      roles.forEach((role) => {
+        if(account.User_ID == user.id && account.Compartiment == role.Name) {
+          compartiment = "(" + account.Compartiment + ")";
+          post = account.Role;
+        }
+      });
+    });
+
+    %>
+
     <section class="content">
       
       <div class="title-text">
@@ -26,7 +44,7 @@
       <div class="inputs">
         <form action="/editaccount" method="post" enctype="multipart/form-data">
           <div class="group">
-          <p>Compartiment</p>
+          <p>Compartiment <%= compartiment %></p>
             <select name="compartiment">
               <option selected="selected">Selectați</option>
               <% roles.forEach((role) => { %>
@@ -38,7 +56,11 @@
           </div>
           <div class="group">
             <p>Post</p>
-            <input type="text" class="form-control" name="post" id="post" placeholder="Postul dvs. (Ex: Specialist IT)" required>
+            <input type="text" class="form-control" name="post" id="post" placeholder="Postul dvs. (Ex: Specialist IT)" value="<%= post %>" required>
+          </div>
+          <div class="group">
+            <p>Instagram</p>
+            <input type="text" class="form-control" name="instagram" id="instagram" placeholder="Fara @. Ex: alex.tulbure4" value="<%= instagram %>">
           </div>
           <button type="submit" class="buton">Salvare</button>
           <a href="/logout" class="buton red">Logout</a>

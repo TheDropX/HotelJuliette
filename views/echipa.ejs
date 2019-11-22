@@ -53,16 +53,16 @@
                                 </div>
 
                                 <div class="roles">
-                                    <% if(member.Github.length > 0) { %>
+                                    <% if(member.Github.length > 1) { %>
                                       <a href="<%= member.Github %>" target="_blank">
                                         <ion-icon name="logo-github"></ion-icon>
                                       </a>
-                                    <% } if(member.Facebook.length > 0) { %>
+                                    <% } if(member.Facebook.length > 1) { %>
                                       <a href="<%= member.Facebook %>" target="_blank">
                                         <ion-icon name="logo-facebook"></ion-icon>
                                       </a>
-                                    <% } if(member.Instagram.length > 0) { %>
-                                      <a href="<%= member.Instagram %>" target="_blank">
+                                    <% } if(member.Instagram.length > 1) { %>
+                                      <a href="<%= `https://instagram.com/${member.Instagram}` %>" target="_blank">
                                         <ion-icon name="logo-instagram"></ion-icon>
                                       </a>
                                     <% } %>
