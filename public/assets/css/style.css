@@ -870,6 +870,15 @@ a.fb {
         padding-left: 11rem;
         padding-bottom: 1rem;
     }
+
+    .compartiment {
+        width: 85%;
+    }
+
+    .membru {
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
     
   }
   
