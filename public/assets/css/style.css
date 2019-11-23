@@ -394,6 +394,10 @@ nav a {
 
 }
 
+.membru:first-child {
+    margin-left: 0 !important;
+}
+
 .membru {
 
     position: relative;
@@ -873,6 +877,10 @@ a.fb {
 
     .compartiment {
         width: 85%;
+    }
+
+    .membru:first-child {
+        margin-left: 0 !important;
     }
 
     .membru {
