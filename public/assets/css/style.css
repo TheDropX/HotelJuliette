@@ -801,6 +801,10 @@ a.fb {
     cursor: pointer;
 }
 
+.navbar-logo {
+    display: flex;
+}
+
 @media screen and (max-width: 650px) {
 
     iframe {
@@ -824,7 +828,6 @@ a.fb {
         align-items: center;
         padding-top: 5rem;
         padding-bottom: 5rem;
-        border: 2px solid red;
 
     }
     
@@ -838,8 +841,6 @@ a.fb {
     
     .img {
 
-        border: 2px solid black;
-        border-style: groove;
         width: 80%;
         float: none;
         padding-right: 0rem;
@@ -927,6 +928,125 @@ a.fb {
   */
   
   @media (min-width: 320px) and (max-width: 480px) {
+    .navbar {
+        display: block;
+        min-height: 100px;
+    }
 
-    
+    .navbar-logo {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-logo img {
+        padding: 0;
+    }
+
+    .links {
+        padding-right: 0;
+        position: static;
+    }
+
+    .links ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-item a {
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+
+    .title-text{
+        font-size: 2.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .echipa {
+        padding-top: 11rem;
+    }
+
+    .compartiment {
+        width: 95%;
+        padding-bottom: 3rem;
+    }
+
+    .team-info {
+        padding: 1.5rem;
+    }
+
+    .team-role {
+        font-size: 2rem!important;
+    }
+
+    .team-description {
+        font-size: .8rem!important;
+    }
+
+    .membru {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        width: 150px;
+        height: 220px;
+    }
+
+    .profile-picture {
+        margin-top: 1rem;
+        width: 80px;
+    }
+
+    .name {
+        font-size: 1.1rem;
+    }
+
+    .role {
+        font-size: 0.7rem;
+    }
+
+    .footer {
+        font-size: .8em;
+    }
+
+    .video {
+        background-image: url("../../assets/img/phone.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding: 0;
+    }
+
+    .video iframe {
+        display: none;
+    }
+
+    .info {
+        padding: 1rem;
+    }
+
+    .info h1 {
+        font-size: 3rem;
+    }
+
+    .info p {
+        font-size: 1.2rem;
+    }
+
+    .arrow {
+        bottom: 15px;
+    }
+
+    .rezervari .title-text {
+        padding-top: 3rem;
+        padding-bottom: 0;
+    }
+
+    .error-img {
+        width: 170px;
+    }
+
+    .error-text {
+        font-size: 2rem;
+    }
   }
