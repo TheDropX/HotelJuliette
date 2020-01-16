@@ -13,6 +13,7 @@ const config = require("./config/config");
 const fs = require('fs');
 const key = fs.readFileSync(`${process.env.KEY_PATH}`);
 const cert = fs.readFileSync(`${process.env.CERT_PATH}`);
+require('dotenv').config();
 
 const { getHomePage } = require("./routes/index");
 const { getTeamPage } = require("./routes/team");
@@ -28,6 +29,9 @@ const db = mysql.createConnection({
   password: config.password,
   database: config.database
 });
+
+console.log(config.host);
+
 
 db.connect(err => {
   if (err) throw err;
