@@ -1,57 +1,57 @@
 <html>
 
-    <head>
+<head>
 
-        <title>Hotel Julitte - <%= title %></title>
+    <title>Hotel Julitte - <%= title %></title>
 
-        <% include ./partials/meta.ejs %>
+    <% include ./partials/meta.ejs %>
 
-        <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <% include partials/navbar.ejs %>
+    <% include partials/navbar.ejs %>
 
-        <section class="rezervari">
+    <section class="rezervari">
 
-            <div class="title-text">
-                Rezervări - Hotel Julitte
-            </div>
+        <div class="title-text">
+            Rezervări - Hotel Julitte
+        </div>
 
-            <div class="rooms">
+        <div class="rooms">
 
             <% rooms.forEach((room, index) => { %>
 
-                <div class="room">
-                    <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg" style="max-width: 100%; max-height: 100%;">
-                    <div class="room_type">Camera <%= room.Type %></div>
-                    <div class="room-info">
-                        <p>Pret pe noapte: <%= room.Price %> RON</p>
-                        <p>Paturi: <%= room.Beds %></p>
-                        <p>Băi: 2</p>
-                        <p>Capacitate: 2x adulti, 3x copii</p>
-                    </div>  
-                    <div class="button" id="button-3">
-                        <div id="circle"></div>
-                        <a href="/camera/<%= room.Type %>">Afla mai multe</a>
-                    </div>
-                    <div class="button" id="button-3">
-                        <div id="circle"></div>
-                        <a href="#">Rezervare</a>
-                    </div>
+            <div class="room">
+                <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg"
+                    style="max-width: 100%; max-height: 100%;">
+                <div class="room_type">Camera <%= room.Type %></div>
+                <div class="room-info">
+                    <p>Pret pe noapte: <%= room.Price %> RON</p>
+                    <p>Paturi: <%= room.Beds %></p>
+                    <p>Băi: 2</p>
+                    <p>Capacitate: 2x adulti, 3x copii</p>
                 </div>
+                <div class="button" id="button-3">
+                    <div id="circle"></div>
+                    <a href="/camera/<%= room.Type %>">Afla mai multe</a>
+                </div>
+                <div class="button" id="button-3">
+                    <div id="circle"></div>
+                    <a href="#">Rezervare</a>
+                </div>
+            </div>
             <% }); %>
         </div>
 
-        </section>
+    </section>
 
 
-        <footer class="footer">
-            <div class="copyright">&copy; Copyright 2019 Hotel Julitte - All Rights Reserved</div>
-        </footer>
+    <% include partials/footer.ejs %>
 
-    </body>
+</body>
+
 </html>

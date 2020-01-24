@@ -194,7 +194,7 @@ nav a {
 }
 
 .footer {
-    
+
     position: fixed;
     bottom: 0;
     z-index: 1;
@@ -812,15 +812,15 @@ a.fb {
         width: 100%;
 
     }
-    
+
     .text {
-    
+
         width: 100%;
-    
+
     }
 
     .content {
-    
+
         width: 100%;
         text-align: center;
         vertical-align: top;
@@ -830,15 +830,15 @@ a.fb {
         padding-bottom: 5rem;
 
     }
-    
+
     .motiv {
 
         width: 100%;
         padding-left: 0rem;
         padding-bottom: 0rem;
-    
+
     }
-    
+
     .img {
 
         width: 80%;
@@ -850,13 +850,13 @@ a.fb {
 
 }
 
-  /* 
+  /*
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
   */
-  
+
   @media (min-width: 1025px) and (max-width: 1280px) {
-    
+
     .video {
         padding-bottom: 80.25%!important;
     }
@@ -888,45 +888,45 @@ a.fb {
         margin-top: 3rem;
         margin-left: 3rem;
     }
-    
+
   }
-  
-  /* 
+
+  /*
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
   */
-  
-  @media (min-width: 768px) and (max-width: 1024px) {
-    
 
-    
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+
+
   }
-  
-  /* 
+
+  /*
     ##Device = Tablets, Ipads (landscape)
     ##Screen = B/w 768px to 1024px
   */
-  
+
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
 
   }
-  
-  /* 
+
+  /*
     ##Device = Low Resolution Tablets, Mobiles (Landscape)
     ##Screen = B/w 481px to 767px
   */
-  
+
   @media (min-width: 481px) and (max-width: 767px) {
 
-    
+
   }
-  
-  /* 
+
+  /*
     ##Device = Most of the Smartphones Mobiles (Portrait)
     ##Screen = B/w 320px to 479px
   */
-  
+
   @media (min-width: 320px) and (max-width: 480px) {
     .navbar {
         display: block;
@@ -1049,4 +1049,40 @@ a.fb {
     .error-text {
         font-size: 2rem;
     }
+  }
+
+  @media (min-width: 1300px) and (max-width: 1400px) {
+
+    .info {
+        padding: 10rem;
+    }
+
+    .motiv {
+        padding-left: 7rem;
+    }
+
+    .img {
+        padding-right: 10rem;
+        width: 35%;
+    }
+
+    .video {
+        padding-bottom: 58%;
+    }
+
+    .arrow {
+        bottom: 45px;
+    }
+
+    .room {
+        height: 400px;
+        width: 300px;
+    }
+
+    .button {
+        width: 115px;
+        margin: 10px 10px 0px 0px;
+        font-size: .7rem;
+    }
+
   }

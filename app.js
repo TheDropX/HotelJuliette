@@ -1,18 +1,20 @@
-const express = require("express");
 const https = require('https');
+const express = require("express");
 const fileUpload = require("express-fileupload");
+const session = require("express-session");
+const app = express();
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
 const path = require("path");
-const app = express();
 const passport = require("passport");
 const FacebookStrategy = require("passport-facebook").Strategy;
-const session = require("express-session");
 const cookieParser = require("cookie-parser");
-const config = require("./config/config");
 const fs = require('fs');
-const key = fs.readFileSync(`${process.env.KEY_PATH}`);
-const cert = fs.readFileSync(`${process.env.CERT_PATH}`);
+const config = require("./config/config");
+const debug = require('./debug');
+const key = fs.readFileSync(process.env.KEY_PATH);
+const cert = fs.readFileSync(process.env.CERT_PATH);
+
 require('dotenv').config();
 
 const { getHomePage } = require("./routes/index");
@@ -23,6 +25,8 @@ const { getAccountPage, editAccount } = require("./routes/account");
 
 const port = 2608;
 
+if(process.env.NODE_ENV == "dev") debug.info("App running in development mode.")
+
 const db = mysql.createConnection({
   host: config.host,
   user: config.username,
@@ -30,12 +34,9 @@ const db = mysql.createConnection({
   database: config.database
 });
 
-console.log(config.host);
-
-
 db.connect(err => {
   if (err) throw err;
-  console.log("Connected to database");
+  debug.success("Connected to database.");
 });
 
 global.db = db;
@@ -65,7 +66,7 @@ app.get("/privacy", function(req, res) {
   res.render('policy.ejs', {
     title: "Privacy Policy"
   });
-  
+
 });
 
 app.post('/editaccount', editAccount);
@@ -149,5 +150,5 @@ app.use(function(req, res, next) {
 const server = https.createServer({ key: key, cert: cert }, app);
 
 server.listen(port, () => {
-  console.log(`Server running on port: ${port}`);
+  debug.info(`Server running on port: ${port}`);
 });

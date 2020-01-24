@@ -1,91 +1,90 @@
 <html>
-  <head>
-    <title>Hotel Julitte - Echipa</title>
 
-    <% include ./partials/meta.ejs %>
+<head>
+  <title>Hotel Julitte - Echipa</title>
 
-    <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-  </head>
+  <% include ./partials/meta.ejs %>
 
-  <body>
+  <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</head>
 
-    <% include partials/navbar.ejs %>
+<body>
 
-    <section class="echipa">
-      <div class="title-text">
-        Echipă - Hotel Julitte
+  <% include partials/navbar.ejs %>
+
+  <section class="echipa">
+    <div class="title-text">
+      Echipă - Hotel Julitte
+    </div>
+
+    <% if (compartments.length > 0) { %>
+    <% compartments.forEach((compartment, index) => { %>
+    <div class="compartiment">
+      <div class="team-info">
+
+        <h1 class="team-role">
+          <%= compartment.Name %>
+        </h1>
+
+        <p class="team-description">
+          <%= compartment.RoleDescription %>
+        </p>
+
       </div>
 
-      <% if (compartments.length > 0) { %> 
-        <% compartments.forEach((compartment, index) => { %>
-        <div class="compartiment">
-            <div class="team-info">
+      <% if (members.length > 0) { %>
 
-                <h1 class="team-role">
-                    <%= compartment.Name %>
-                </h1>
+      <div class="row">
 
-                <p class="team-description">
-                    <%= compartment.RoleDescription %>
-                </p>
+        <% members.forEach((member, index) => { %>
+        <% if(member.Compartiment == compartment.Name) { %>
 
-            </div>
+        <div class="membru">
 
-            <% if (members.length > 0) { %>
+          <img src="<%= member.ProfilePicture %>" class="profile-picture" />
 
-                <div class="row">
+          <div class="name">
+            <%= member.Name %>
+          </div>
 
-                    <% members.forEach((member, index) => { %> 
-                        <% if(member.Compartiment == compartment.Name) { %>
+          <div class="role">
+            <%= member.Role %>
+          </div>
 
-                            <div class="membru">
+          <div class="roles">
+            <% if(member.Github.length > 1) { %>
+            <a href="<%= member.Github %>" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <% } if(member.Facebook.length > 1) { %>
+            <a href="<%= member.Facebook %>" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <% } if(member.Instagram.length > 1) { %>
+            <a href="<%= `https://instagram.com/${member.Instagram}` %>" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <% } %>
+          </div>
 
-                                <img src="<%= member.ProfilePicture %>" class="profile-picture" />
+        </div>
 
-                                <div class="name">
-                                    <%= member.Name %>
-                                </div>
-
-                                <div class="role">
-                                    <%= member.Role %>
-                                </div>
-
-                                <div class="roles">
-                                    <% if(member.Github.length > 1) { %>
-                                      <a href="<%= member.Github %>" target="_blank">
-                                        <ion-icon name="logo-github"></ion-icon>
-                                      </a>
-                                    <% } if(member.Facebook.length > 1) { %>
-                                      <a href="<%= member.Facebook %>" target="_blank">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                      </a>
-                                    <% } if(member.Instagram.length > 1) { %>
-                                      <a href="<%= `https://instagram.com/${member.Instagram}` %>" target="_blank">
-                                        <ion-icon name="logo-instagram"></ion-icon>
-                                      </a>
-                                    <% } %>
-                                </div>
-
-                            </div>
-
-                        <% } %>
-                    <% }); %>
-                <% } %>
-
-                </div>
-            </div>
-
+        <% } %>
         <% }); %>
-      <% } %>
+        <% } %>
 
-    </section>
-
-    <footer class="footer">
-      <div class="copyright">
-        &copy; Copyright 2019 Hotel Julitte - All Rights Reserved
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <% }); %>
+    <% } %>
+
+  </section>
+
+  <% include partials/footer.ejs %>
+  </footer>
+</body>
+
 </html>
