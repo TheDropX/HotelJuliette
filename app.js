@@ -14,7 +14,7 @@ const config = require("./config/config");
 const debug = require('./debug');
 const key = fs.readFileSync(process.env.KEY_PATH);
 const cert = fs.readFileSync(process.env.CERT_PATH);
-const ca = fs.readFileSync('./bundle.ca-bundle');
+const ca = fs.readFileSync(process.env.BUNDLE_PATH);
 
 require('dotenv').config();
 
