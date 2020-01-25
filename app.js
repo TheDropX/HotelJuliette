@@ -14,6 +14,7 @@ const config = require("./config/config");
 const debug = require('./debug');
 const key = fs.readFileSync(process.env.KEY_PATH);
 const cert = fs.readFileSync(process.env.CERT_PATH);
+const ca = fs.readFileSync('./bundle.ca-bundle');
 
 require('dotenv').config();
 
@@ -147,7 +148,7 @@ app.use(function(req, res, next) {
   res.type("txt").send("Not found");
 });
 
-const server = https.createServer({ key: key, cert: cert }, app);
+const server = https.createServer({ key: key, cert: cert, ca: ca }, app);
 
 server.listen(port, () => {
   debug.info(`Server running on port: ${port}`);
