@@ -19,7 +19,7 @@ require('dotenv').config();
 
 const { getHomePage } = require("./routes/index");
 const { getTeamPage } = require("./routes/team");
-const { getRoomPage, getRoomsPage } = require("./routes/rezervari");
+const { getRoomPage, getRoomsPage, getBookingPage, createBooking } = require("./routes/rezervari");
 const { getLoginPage } = require("./routes/login");
 const { getAccountPage, editAccount } = require("./routes/account");
 
@@ -60,6 +60,7 @@ app.get("/rezervari", getRoomsPage);
 app.get("/login", getLoginPage);
 app.get("/camera/:type", getRoomPage);
 app.get("/account", getAccountPage);
+app.get("/rezervare/:type", getBookingPage);
 
 app.get("/privacy", function(req, res) {
 
@@ -70,6 +71,7 @@ app.get("/privacy", function(req, res) {
 });
 
 app.post('/editaccount', editAccount);
+app.post('/createbooking/:type', createBooking);
 
 passport.serializeUser(function(user, done) {
   done(null, user);

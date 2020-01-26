@@ -9,7 +9,7 @@ html {
 
 body {
 
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif!important;
     background-color: white;
     color: white;
     margin: 0;
@@ -222,7 +222,7 @@ nav a {
 
 }
 
-.title-text {
+.title-text, #title-text {
 
     font-family: 'Rubik', sans-serif;
     font-size: 3rem;
@@ -663,7 +663,7 @@ nav a {
     flex-direction: column;
 }
 
-.inputs select {
+.inputs select, #select {
     width: 250px;
     padding: 6px 12px;
     border: 1px solid #ccc;
@@ -678,7 +678,7 @@ nav a {
     color: black;
 }
 
-input {
+input, #input {
     display: block;
     margin: auto;
     width: 350px;
@@ -747,14 +747,22 @@ a.fb {
     content: "f";
 }
 
-.group {
+.group, #group {
     padding-bottom: 5px;
 }
 
-.group p {
+.group p, #group-p {
     color: black;
     line-height: 0;
+    font-size: 16px;
     font-weight: 800;
+    margin: 0!important;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+#datetimepicker1 {
+    padding-bottom: 15px;
 }
 
 .camera {
