@@ -12,8 +12,8 @@ const cookieParser = require("cookie-parser");
 const fs = require('fs');
 const config = require("./config/config");
 const debug = require('./debug');
-const key = fs.readFileSync(process.env.KEY_PATH);
-const cert = fs.readFileSync(process.env.CERT_PATH);
+const key = fs.readFileSync(`${process.env.KEY_PATH}`);
+const cert = fs.readFileSync(`${process.env.CERT_PATH}`);
 
 require('dotenv').config();
 
