@@ -1,11 +1,11 @@
 <nav class="navbar">
     <%
     let path;
-    if(title == 'Camera') path = "../assets/img/logo.png";
+    if(title == 'Camera' || title.includes("Rezervare") || title.includes("Error")) path = "../assets/img/logo.png";
     else path = "./assets/img/logo.png";
      %>
     <div class="navbar-logo">
-        <img src="<%= path %>">
+        <img src="https://hotel.thedrop.me/assets/img/logo.png">
         <a href="/">JULIETTE</a>
     </div>
 
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#">
+                <a href="/contact">
                     <ion-icon name="information-circle-outline"></ion-icon>
                     Contact
                 </a>

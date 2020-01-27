@@ -24,7 +24,7 @@
       }
       roles.forEach((role) => {
         if(account.User_ID == user.id && account.Compartiment == role.Name) {
-          compartiment = "(" + account.Compartiment + ")";
+          compartiment = account.Compartiment;
           post = account.Role;
         }
       });
@@ -45,12 +45,30 @@
     <div class="inputs">
       <form action="/editaccount" method="post" enctype="multipart/form-data">
         <div class="group">
-          <p>Compartiment <%= compartiment %></p>
+          <p>Compartiment (<%= compartiment %>)</p>
           <select name="compartiment">
+
+            <% if(!compartiment || compartiment == "Selectați") { %>
+
             <option selected="selected">Selectați</option>
+
+            <% } else { %>
+
+            <option>Selectați</option>
+
+            <% } %>
+
             <% roles.forEach((role) => { %>
 
+            <% if(role.Name == compartiment) { %>
+
+            <option selected="selected" value="<%= role.Name %>"><%= role.Name %></option>
+
+            <% } else { %>
+
             <option value="<%= role.Name %>"><%= role.Name %></option>
+
+            <% } %>
 
             <% }); %>
           </select>

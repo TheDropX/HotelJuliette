@@ -22,10 +22,9 @@ const { getTeamPage } = require("./routes/team");
 const { getRoomPage, getRoomsPage, getBookingPage, createBooking } = require("./routes/rezervari");
 const { getLoginPage } = require("./routes/login");
 const { getAccountPage, editAccount } = require("./routes/account");
+const { getContactPage, createTicket } = require("./routes/contact");
 
 const port = 2608;
-
-if(process.env.NODE_ENV == "dev") debug.info("App running in development mode.")
 
 const db = mysql.createConnection({
   host: config.host,
@@ -61,6 +60,7 @@ app.get("/login", getLoginPage);
 app.get("/camera/:type", getRoomPage);
 app.get("/account", getAccountPage);
 app.get("/rezervare/:type", getBookingPage);
+app.get("/contact", getContactPage);
 
 app.get("/privacy", function(req, res) {
 
@@ -72,6 +72,7 @@ app.get("/privacy", function(req, res) {
 
 app.post('/editaccount', editAccount);
 app.post('/createbooking/:type', createBooking);
+app.post('/contactForm', createTicket);
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -153,4 +154,8 @@ const server = https.createServer({ key: key, cert: cert }, app);
 
 server.listen(port, () => {
   debug.info(`Server running on port: ${port}`);
+  debug.info(`Server running on https://localhost:${port}`);
 });
+
+if (process.env.NODE_ENV == "dev") debug.info("App running in development mode.")
+else debug.info("Website started.");

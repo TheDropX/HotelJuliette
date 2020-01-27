@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oxygen&display=swap');
 
 html {
 
@@ -523,6 +524,7 @@ nav a {
 
 .rooms {
 
+    font-family: "Oxygen";
     display: flex;
     flex-wrap: wrap;
     margin-top: 3rem;
@@ -813,6 +815,85 @@ a.fb {
     display: flex;
 }
 
+.contact-section {
+
+    height: 100%;
+    display: inline-flex;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#map {
+
+    box-shadow: 0 0px 40px #000000;
+
+}
+
+.contact {
+
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.contact-inputs {
+
+    width: 20%;
+    padding: 25px;
+    margin-right: 10rem;
+    box-shadow: 0 0px 40px #000000;
+    background: #f5f5f5;
+    float: left;
+
+}
+
+.contact-inputs input, .contact-inputs textarea {
+
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #1c87c9;
+    outline: none;
+    resize: none;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.contact-inputs h1, .contact-inputs p {
+
+    color: black;
+    font-weight: 400;
+
+}
+
+.contact-inputs button {
+
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #1c87c9;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+
+}
+
+.g-recaptcha {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+
 @media screen and (max-width: 650px) {
 
     iframe {
@@ -897,6 +978,10 @@ a.fb {
         margin-left: 3rem;
     }
 
+    .contact-inputs {
+        width: 25%;
+        margin-right: 5rem;
+    }
   }
 
   /*
@@ -1057,6 +1142,28 @@ a.fb {
     .error-text {
         font-size: 2rem;
     }
+
+    .contact-section {
+        display: block;
+        background: none;
+        background-color: #fff;
+    }
+
+    .contact-inputs {
+        width: auto;
+        margin-right: 0;
+        float: none;
+        box-shadow: none;
+        padding-top: 10rem;
+    }
+
+    #map {
+        display: none;
+    }
+
+    .content {
+        padding-top: 10rem;
+    }
   }
 
   @media (min-width: 1300px) and (max-width: 1400px) {
@@ -1091,6 +1198,11 @@ a.fb {
         width: 115px;
         margin: 10px 10px 0px 0px;
         font-size: .7rem;
+    }
+
+    .contact-inputs {
+        width: 23%;
+        margin-right: 5rem;
     }
 
   }

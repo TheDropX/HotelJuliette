@@ -65,13 +65,15 @@ module.exports = {
         let roomType = req.params.type;
 
         res.render('rezervare.ejs', {
-            title: `Rezervare - Camera ${roomType}`,
+            title: `Rezervare Camera ${roomType}`,
             roomType: roomType
         });
 
 
     },
     createBooking: async (req, res) => {
+
+        //TODO: Fix navbar on this page.
 
         //TODO: Create verification system.
 
@@ -91,7 +93,7 @@ module.exports = {
             if (err) console.log(err);
 
             var mailOptions = {
-              from: "hotel@thedrop.me",
+              from: "Rezervari Hotel Juliette <hotel@thedrop.me>",
               to: email,
               subject: `Rezervare camera ${roomType}`,
               text: "",
@@ -141,12 +143,15 @@ module.exports = {
 
             transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
-                    //TODO: Create error page.
                     console.log(error);
+
+                    res.render('errors/error.ejs', {
+                        title: "Error"
+                    });
                 } else {
                     console.log('Email sent: ' + info.response);
 
-                    res.redirect("/");
+                    res.redirect('/');
                 }
             });
         });

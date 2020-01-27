@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+  <title>Hotel Julitte - <%= title %></title>
+
+  <% include ./partials/meta.ejs %>
+
+  <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body class="contact">
+
+  <% include partials/navbar.ejs %>
+
+  <section class="contact-section">
+    <form class="contact-inputs" action="/contactForm" method="post" enctype="multipart/form-data" id="contact_form">
+      <h1>Contactează-ne</h1>
+      <p id="error_p" style="color: red;"></p>
+      <div>
+        <input type="text" name="name" placeholder="Numele dvs." id="name">
+        <input type="text" name="email" placeholder="Email" id="email">
+        <input type="text" name="phoneNumber" placeholder="Numărul de telefon" id="phoneNumber">
+      </div>
+      <p>Mesaj</p>
+      <div>
+        <textarea rows="4" name="textArea" id="textArea"></textarea>
+      </div>
+      <div class="g-recaptcha" data-sitekey="6LdBMtMUAAAAAH-HjmmJrI-7zFqgsfxBLMl1lYKs"></div>
+      <button type="submit" href="/">Trimite</button>
+    </form>
+
+    <iframe width="720" height="400"
+      src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;coord=47.167277,27.589311&amp;q=+(Economic%20Administrative%20College)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+      frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="map"></iframe>
+
+  </section>
+
+  <% include partials/footer.ejs %>
+
+  <script>
+    const form = document.getElementById("contact_form");
+    var error_p = document.getElementById("error_p");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phoneNumber = document.getElementById("phoneNumber").value;
+
+
+    form.addEventListener("submit", function (evt) {
+
+      var message = document.getElementById("textArea").value;
+      var response = grecaptcha.getResponse();
+
+      if (response.length == 0) {
+        error_p.innerHTML = "Please verify that you are human!";
+        evt.preventDefault();
+        return false;
+      } else if (!name.length >= 5 || !email.length >= 5 || !phoneNumber.length >= 8 || !message.length >= 10) {
+        error_p.innerHTML = "Please complete all fields!";
+        return false;
+      } else form.submit();
+
+    });
+  </script>
+
+</body>
+
+</html>
