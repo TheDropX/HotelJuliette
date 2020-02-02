@@ -22,6 +22,7 @@ const { getTeamPage } = require("./routes/team");
 const { getRoomPage, getRoomsPage, getBookingPage, createBooking } = require("./routes/rezervari");
 const { getLoginPage } = require("./routes/login");
 const { getAccountPage, editAccount } = require("./routes/account");
+const { getRestaurantPage } = require('./routes/restaurant')
 const { getContactPage, createTicket } = require("./routes/contact");
 
 const port = 2608;
@@ -60,6 +61,7 @@ app.get("/login", getLoginPage);
 app.get("/camera/:type", getRoomPage);
 app.get("/account", getAccountPage);
 app.get("/rezervare/:type", getBookingPage);
+app.get("/restaurant", getRestaurantPage);
 app.get("/contact", getContactPage);
 
 app.get("/privacy", function(req, res) {
