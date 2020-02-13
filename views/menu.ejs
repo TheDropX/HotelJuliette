@@ -1,0 +1,53 @@
+<html>
+
+<head>
+
+  <title>Hotel Julitte - <%= title %></title>
+
+  <% include ./partials/meta.ejs %>
+
+  <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+  <% include partials/navbar.ejs %>
+
+  <section class="menu-section">
+
+    <% categories.map(category => { %>
+
+    <div class="category">
+
+      <h1 class="category-name"><%= category %></h1>
+
+      <div class="products">
+
+        <% items.map(item => { %>
+        <% if(item.Category == category) { %>
+
+        <div class="product">
+          <h3 class="product-name"><%= item.Name %> (Pret: <%= item.Price %> RON)</h3>
+          <p><%= item.Description %></p>
+        </div>
+
+        <% } %>
+        <% }); %>
+
+      </div>
+
+    </div>
+
+    <% }); %>
+
+  </section>
+
+  <% include partials/footer.ejs %>
+
+</body>
+
+</html>
