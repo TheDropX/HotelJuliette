@@ -437,6 +437,8 @@ nav a {
 
     border-radius: 50%;
     width: 100px;
+    height: 100px;
+    object-fit: cover;
     margin-top: 2rem;
     margin-bottom: 1rem;
 
