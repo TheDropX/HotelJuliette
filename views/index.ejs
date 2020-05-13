@@ -1,118 +1,102 @@
 <html>
+	<head>
+		<title>Hotel Julitte - <%= title %></title>
 
-<head>
+		<% include ./partials/meta.ejs %>
 
-    <title>Hotel Julitte - <%= title %></title>
+		<link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	</head>
 
-    <% include ./partials/meta.ejs %>
+	<body>
+		<% include partials/navbar.ejs %>
+		<div class="first">
+			<div class="video">
+				<div class="juliette">
+					<div class="info">
+						<h1>HOTEL JULIETTE</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Pellentesque quis ex a ante viverra eleifend in in tellus. Cras
+							turpis ante, scelerisque vitae tortor eu, scelerisque feugiat
+							ligula.
+						</p>
+					</div>
 
-    <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+					<div class="arrow">
+						<a href="#content">
+							<ion-icon name="ios-arrow-down" size="large"></ion-icon>
+						</a>
+					</div>
+				</div>
+				<div id="homemap">
+					<iframe
+						src="https://www.youtube.com/embed/teLhLLlhfzc?autoplay=1&mute=1&rel=0&controls=0&wmode=opaque"
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+		</div>
 
-</head>
+		<section class="content" id="content">
+			<div class="title-text">
+				De ce să ne alegeți
+			</div>
 
-<body>
+			<img class="img" src="assets/img/image.jpg" />
 
-    <% include partials/navbar.ejs %>
-    <div class="first">
+			<div class="motiv">
+				<div class="numar">1</div>
 
-        <div class="video">
+				<div class="text">
+					<h4 class="title">Misiunea noastră</h4>
 
-            <div class="juliette">
+					<div class="description">
+						Misiunea noastră este de a oferi clienților cele mai bune condiții
+						de cazare la cele mai avantajoase prețuri și să devenim lideri pe
+						piața turismului românesc! În plus, hotelul nostru organizează tot
+						felul de evenimente: de la botezuri și majorate până la nunți și
+						petreceri tematice.
+					</div>
+				</div>
+			</div>
 
-                <div class="info">
-                    <h1>HOTEL JULIETTE</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ex a ante viverra
-                        eleifend in in tellus. Cras turpis ante, scelerisque vitae tortor eu, scelerisque feugiat
-                        ligula.</p>
-                </div>
+			<div class="motiv">
+				<div class="numar">2</div>
 
-                <div class="arrow">
-                    <a href="#content">
-                        <ion-icon name="ios-arrow-down" size="large"></ion-icon>
-                    </a>
-                </div>
+				<div class="text">
+					<h4 class="title">Viziunea noastră</h4>
 
-            </div>
-            <div id="homemap">
-                <iframe src="https://www.youtube.com/embed/teLhLLlhfzc?autoplay=1&mute=1&rel=0&controls=0&wmode=opaque"
-                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+					<div class="description">
+						Viziunea noastră constă în asigurarea unui mediu potrivit atât
+						clientilor, cât și angajaților. De asemenea dorim să asigurăm o
+						calitate ridicată a serviciilor noastre prin dotări și personal
+						activ, instruit în permanență cu ajutorul programelor noastre de
+						perfecționare.
+					</div>
+				</div>
+			</div>
+		</section>
 
-        </div>
+		<section class="content" id="content">
+			<div class="title-text">
+				Unde ne găsiți
+			</div>
 
-    </div>
+			<iframe
+				style="box-shadow: 0px 0px 40px 0px #888888;"
+				width="720"
+				height="400"
+				src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;coord=47.167277,27.589311&amp;q=+(Economic%20Administrative%20College)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
+				frameborder="0"
+				scrolling="no"
+				marginheight="0"
+				marginwidth="0"
+			></iframe>
+		</section>
 
-    <section class="content" id="content">
-
-        <div class="title-text">
-            De ce să ne alegeți
-        </div>
-
-        <img class="img" src="assets/img/image.jpg">
-
-        <div class="motiv">
-
-            <div class="numar">1</div>
-
-            <div class="text">
-
-                <h4 class="title">Test test</h4>
-
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ex a
-                    ante viverra eleifend in in tellus.</div>
-
-            </div>
-
-        </div>
-
-        <div class="motiv">
-
-            <div class="numar">2</div>
-
-            <div class="text">
-
-                <h4 class="title">Test test</h4>
-
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ex a
-                    ante viverra eleifend in in tellus.</div>
-
-            </div>
-
-        </div>
-
-        <div class="motiv">
-
-            <div class="numar">3</div>
-
-            <div class="text">
-
-                <h4 class="title">Test test</h4>
-
-                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis ex a
-                    ante viverra eleifend in in tellus.</div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="content" id="content">
-
-        <div class="title-text">
-            Unde ne găsiți
-        </div>
-
-        <iframe style="box-shadow: 0px 0px 40px 0px #888888;" width="720" height="400"
-            src="https://maps.google.com/maps?width=720&amp;height=400&amp;hl=en&amp;coord=47.167277,27.589311&amp;q=+(Economic%20Administrative%20College)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed"
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-
-    </section>
-
-    <% include partials/footer.ejs %>
-
-</body>
-
+		<% include partials/footer.ejs %>
+	</body>
 </html>

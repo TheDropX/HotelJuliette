@@ -1,104 +1,115 @@
-var nodemailer = require('nodemailer');
+var nodemailer = require("nodemailer");
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL,
-    pass: process.env.EMAIL_PASSWORD
-  }
+	service: "gmail",
+	auth: {
+		user: process.env.EMAIL,
+		pass: process.env.EMAIL_PASSWORD
+	}
 });
 
 module.exports = {
-    getRoomPage: (req, res) => {
+	getRoomPage: (req, res) => {
+		let roomType = req.params.type;
 
-        let roomType = req.params.type;
+		getRoomData(roomType, function (err, roomData) {
+			if (err) console.log(err);
 
-        getRoomData(roomType, function(err, roomData) {
-            if (err) console.log(err);
+			if (roomData[0]) {
+				res.render("camera.ejs", {
+					title: "Camera",
+					roomData: roomData
+				});
+			} else
+				res.render("errors/404.ejs", {
+					title: "Error"
+				});
+		});
 
-            res.render('camera.ejs', {
-                title: "Camera",
-                roomData: roomData
-            });
-            console.log(roomData)
-        });
+		function getRoomData(type, callback) {
+			db.query(
+				"SELECT * FROM `camere` WHERE ID = '" + type + "' LIMIT 1;",
+				function (err, result) {
+					if (err) callback(err, null);
+					else callback(null, result);
+				}
+			);
+		}
+	},
+	getRoomsPage: (req, res) => {
+		getRooms(function (err, rooms) {
+			if (err) console.log(err);
 
-        function getRoomData(type, callback) {
+			res.render("rezervari.ejs", {
+				title: "Camere",
+				rooms: rooms
+			});
+		});
 
-            db.query("SELECT * FROM `camere` WHERE Type = '" + type + "' LIMIT 1;", function(err, result) {
+		function getRooms(callback) {
+			db.query("SELECT * FROM `camere` ORDER BY ID", function (err, result) {
+				if (err) callback(err, null);
+				else callback(null, result);
+			});
+		}
+	},
+	getBookingPage: (req, res) => {
+		let roomType = req.params.type;
 
-                if (err)
-                    callback(err, null);
-                else
-                    callback(null, result);
+		getRoomData(roomType, function (err, roomData) {
+			if (err) console.log(err);
 
-            });
+			if (roomData[0]) {
+				res.render("rezervare.ejs", {
+					title: `Rezervare Camera ${roomType}`,
+					roomData: roomData
+				});
+			} else
+				res.render("errors/404.ejs", {
+					title: "Error"
+				});
+		});
 
-        }
-    },
-    getRoomsPage: (req, res) => {
+		function getRoomData(type, callback) {
+			db.query(
+				"SELECT * FROM `camere` WHERE ID = '" + type + "' LIMIT 1;",
+				function (err, result) {
+					if (err) callback(err, null);
+					else callback(null, result);
+				}
+			);
+		}
+	},
+	createBooking: async (req, res) => {
+		//TODO: Fix navbar on this page.
 
-        getRooms(function(err, rooms) {
-            if (err) console.log(err);
+		//TODO: Create verification system.
 
-            res.render('rezervari.ejs', {
-                title: "Camere",
-                rooms: rooms
-            });
-        });
+		let name = req.body.name;
+		let last_name = req.body.last_name;
+		let roomType = req.params.type;
+		let email = req.body.email;
+		let start_date = req.body.start_date;
+		let end_date = req.body.end_date;
+		let phoneNumber = req.body.phoneNumber;
+		let adultsNumber = req.body.adultsNumber;
+		let childrenNumber = req.body.childrenNumber;
 
-        function getRooms(callback) {
+		getRoomData(roomType, async function (err, roomData) {
+			if (err) console.log(err);
 
-            db.query("SELECT * FROM `camere` ORDER BY ID", function(err, result) {
+			let query = `INSERT INTO rezervari (Name, Last_Name, RoomType, Email, Start_Date, End_Date, phoneNumber, adultsNumber, childrenNumber) VALUES ('${name}', '${last_name}', '${roomData[0].Type}', '${email}', '${start_date}', '${end_date}', '${phoneNumber}', '${adultsNumber}', '${childrenNumber}');`;
 
-                if (err)
-                    callback(err, null);
-                else
-                    callback(null, result);
+			await db.query(query, function (err, result) {
+				if (err) console.log(err);
 
-            });
-
-        }
-    },
-    getBookingPage: (req, res) => {
-
-        let roomType = req.params.type;
-
-        res.render('rezervare.ejs', {
-            title: `Rezervare Camera ${roomType}`,
-            roomType: roomType
-        });
-
-
-    },
-    createBooking: async (req, res) => {
-
-        //TODO: Fix navbar on this page.
-
-        //TODO: Create verification system.
-
-        let name = req.body.name;
-        let last_name = req.body.last_name;
-        let roomType = req.params.type;
-        let email = req.body.email;
-        let start_date = req.body.start_date;
-        let end_date = req.body.end_date;
-        let phoneNumber = req.body.phoneNumber;
-        let adultsNumber = req.body.adultsNumber;
-        let childrenNumber = req.body.childrenNumber;
-
-        let query = `INSERT INTO rezervari (Name, Last_Name, RoomType, Email, Start_Date, End_Date, phoneNumber, adultsNumber, childrenNumber) VALUES ('${name}', '${last_name}', '${roomType}', '${email}', '${start_date}', '${end_date}', '${phoneNumber}', '${adultsNumber}', '${childrenNumber}');`;
-
-        await db.query(query, function (err, result) {
-            if (err) console.log(err);
-
-            var mailOptions = {
-              from: "Rezervari Hotel Juliette <hotel@thedrop.me>",
-              to: email,
-              subject: `Rezervare camera ${roomType}`,
-              text: "",
-              //TODO: Fix image resizing issue.
-              html: `
+				var mailOptions = {
+					from: "Rezervari Hotel Juliette <hotel@thedrop.me>",
+					to: email,
+					subject: `Rezervare camera ${roomData[0].Type}`,
+					text: "",
+					//TODO: Fix image resizing issue.
+					html: `
                 <html>
 
                 <head>
@@ -127,7 +138,7 @@ module.exports = {
                     <h2 style="padding-bottom: 15px; margin: 0;">Detalii rezervare:</h2>
                     <p class="info"><b>Nume: ${name}</b></p>
                     <p class="info"><b>Prenume: ${last_name}</b></p>
-                    <p class="info"><b>Tip camera: ${roomType}</b></p>
+                    <p class="info"><b>Tip camera: ${roomData[0].Type}</b></p>
                     <p class="info"><b>Email: ${email}</b></p>
                     <p class="info"><b>Durata rezervarii: ${start_date}</b></p>
                     <p class="info"><b>Numar de telefon: ${end_date}</b></p>
@@ -139,22 +150,32 @@ module.exports = {
 
             </html>
             `
-            };
+				};
 
-            transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                    console.log(error);
+				transporter.sendMail(mailOptions, function (error, info) {
+					if (error) {
+						console.log(error);
 
-                    res.render('errors/error.ejs', {
-                        title: "Error"
-                    });
-                } else {
-                    console.log('Email sent: ' + info.response);
+						res.render("errors/error.ejs", {
+							title: "Error"
+						});
+					} else {
+						console.log("Email sent: " + info.response);
 
-                    res.redirect('/');
-                }
-            });
-        });
+						res.redirect("/");
+					}
+				});
+			});
+		});
 
-    }
+		function getRoomData(type, callback) {
+			db.query(
+				"SELECT * FROM `camere` WHERE ID = '" + type + "' LIMIT 1;",
+				function (err, result) {
+					if (err) callback(err, null);
+					else callback(null, result);
+				}
+			);
+		}
+	}
 };

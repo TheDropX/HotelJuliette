@@ -2,36 +2,67 @@
 
 <head>
 
-  <title>Hotel Julitte - <%= title %></title>
+  <title>Hotel Juliette - <%= title %></title>
 
   <% include ./partials/meta.ejs %>
 
   <link rel="stylesheet" href="../assets/css/style.css?v=<%= Date.now() %>">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
 
-  <% include partials/navbar.ejs %>
+<nav class="navbar">
+	<div class="navbar-logo">
+		<img src="../assets/img/logo.png" />
+		<a href="/">JULIETTE</a>
+	</div>
+
+	<div class="links">
+		<ul>
+			<li class="nav-item">
+				<a href="/rezervari">
+					<ion-icon name="ios-bed"></ion-icon>
+					Rezervări
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/restaurant">
+					<ion-icon name="pizza"></ion-icon>
+					Restaurant
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/echipa">
+					<ion-icon name="contacts"></ion-icon>
+					Echipă
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/contact">
+					<ion-icon name="information-circle-outline"></ion-icon>
+					Contact
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
 
   <section class="rezervari">
 
     <div class="title-text" id="title-text">
-      Rezervări - Camera <%= roomType %>
+      Rezervări - Camera <%= roomData[0].Type %>
     </div>
 
     <h2 style="color: black;">Vă rog să selectați/completați câmpurile de mai jos.</h2>
     <div class="inputs">
-      <form action="/createbooking/<%= roomType %>" method="post" enctype="multipart/form-data">
+      <form action="/createbooking/<%= roomData[0].ID %>" method="post" enctype="multipart/form-data">
         <div class="group" id="group">
           <p>Persoane</p>
           <select name="adultsNumber" id="select">
@@ -88,6 +119,7 @@
     </div>
 
   </section>
+  <% include partials/footer.ejs %>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </script>
@@ -168,8 +200,6 @@
       bindDatePicker2();
     });
   </script>
-
-  <% include partials/footer.ejs %>
 
 </body>
 

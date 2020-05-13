@@ -1,57 +1,45 @@
 <html>
+	<head>
+		<title>Hotel Juliette - <%= title %></title>
 
-<head>
+		<% include ./partials/meta.ejs %>
 
-    <title>Hotel Julitte - <%= title %></title>
+		<link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	</head>
 
-    <% include ./partials/meta.ejs %>
+	<body>
+		<% include partials/navbar.ejs %>
 
-    <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<section class="rezervari">
+			<div class="title-text">
+				Rezervări - Hotel Juliette
+			</div>
 
-</head>
+			<div class="rooms">
+				<% rooms.forEach((room, index) => { %>
 
-<body>
+				<div class="room">
+					<img src="../assets/img/<%= room.MainImage %>.jpg" />
+					<div class="room_type">Camera <%= room.Type %></div>
+					<div class="room-info">
+						<p>Pret pe noapte: <%= room.Price %> RON</p>
+						<p>Paturi: <%= room.Beds %></p>
+						<p>Băi: <%= room.Bai %></p>
+					</div>
+					<a href="/camera/<%= room.ID %>" class="button" id="button-3">
+						<div id="circle"></div>
+						<p>Afla mai multe</p>
+					</a>
+					<a href="/rezervare/<%= room.ID %>" class="button" id="button-3">
+						<div id="circle"></div>
+						<p>Rezervare</p>
+					</a>
+				</div>
+				<% }); %>
+			</div>
+		</section>
 
-    <% include partials/navbar.ejs %>
-
-    <section class="rezervari">
-
-        <div class="title-text">
-            Rezervări - Hotel Juliette
-        </div>
-
-        <div class="rooms">
-
-            <% rooms.forEach((room, index) => { %>
-
-            <div class="room">
-                <img src="http://www.langhamhotels.com/cdn-4fdea42f/globalassets/lhr/tl-chicago/rooms/tlchi-rooms-classic_room-doublebed-1680-945.jpg"
-                    style="max-width: 100%; max-height: 100%;">
-                <div class="room_type">Camera <%= room.Type %></div>
-                <div class="room-info">
-                    <p>Pret pe noapte: <%= room.Price %> RON</p>
-                    <p>Paturi: <%= room.Beds %></p>
-                    <p>Băi: 2</p>
-                    <p>Capacitate: 2x adulti, 3x copii</p>
-                </div>
-                <div class="button" id="button-3">
-                    <div id="circle"></div>
-                    <a href="/camera/<%= room.Type %>">Afla mai multe</a>
-                </div>
-                <div class="button" id="button-3">
-                    <div id="circle"></div>
-                    <a href="#">Rezervare</a>
-                </div>
-            </div>
-            <% }); %>
-        </div>
-
-    </section>
-
-
-    <% include partials/footer.ejs %>
-
-</body>
-
+		<% include partials/footer.ejs %>
+	</body>
 </html>

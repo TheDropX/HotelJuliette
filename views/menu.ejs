@@ -1,53 +1,47 @@
 <html>
+	<head>
+		<title>Hotel Julitte - <%= title %></title>
 
-<head>
+		<% include ./partials/meta.ejs %>
 
-  <title>Hotel Julitte - <%= title %></title>
+		<link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule=""
+			src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+		></script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	</head>
 
-  <% include ./partials/meta.ejs %>
+	<body>
+		<% include partials/navbar.ejs %>
 
-  <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>">
-  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<section class="menu-section">
+			<% categories.map(category => { %>
 
-</head>
+			<div class="category">
+				<h1 class="category-name"><%= category %></h1>
 
-<body>
+				<div class="products">
+					<% items.map(item => { %> <% if(item.Category == category) { %>
 
-  <% include partials/navbar.ejs %>
+					<div class="product">
+						<h3 class="product-name">
+							<%= item.Name %> (Pret: <%= item.Price %>)
+						</h3>
+						<p><%= item.Description %></p>
+					</div>
 
-  <section class="menu-section">
+					<% } %> <% }); %>
+				</div>
+			</div>
 
-    <% categories.map(category => { %>
+			<% }); %>
+		</section>
 
-    <div class="category">
-
-      <h1 class="category-name"><%= category %></h1>
-
-      <div class="products">
-
-        <% items.map(item => { %>
-        <% if(item.Category == category) { %>
-
-        <div class="product">
-          <h3 class="product-name"><%= item.Name %> (Pret: <%= item.Price %> RON)</h3>
-          <p><%= item.Description %></p>
-        </div>
-
-        <% } %>
-        <% }); %>
-
-      </div>
-
-    </div>
-
-    <% }); %>
-
-  </section>
-
-  <% include partials/footer.ejs %>
-
-</body>
-
+		<% include partials/footer.ejs %>
+	</body>
 </html>
