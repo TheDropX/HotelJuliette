@@ -1,0 +1,197 @@
+<html>
+
+<head>
+
+  <title>Hotel Juliette - <%= title %></title>
+
+  <% include ./partials/meta.ejs %>
+
+  <link rel="stylesheet" href="../assets/css/style.css?v=<%= Date.now() %>">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+	<div class="navbar-logo">
+		<img src="../assets/img/logo.png" />
+		<a href="/">JULIETTE</a>
+	</div>
+
+	<div class="links">
+		<ul>
+			<li class="nav-item">
+				<a href="/rezervari">
+					<ion-icon name="ios-bed"></ion-icon>
+					Rezervări
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/restaurant">
+					<ion-icon name="pizza"></ion-icon>
+					Restaurant
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/echipa">
+					<ion-icon name="contacts"></ion-icon>
+					Echipă
+				</a>
+			</li>
+			<li class="nav-item">
+				<a href="/contact">
+					<ion-icon name="information-circle-outline"></ion-icon>
+					Contact
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+
+  <section class="rezervari">
+
+    <div class="title-text" id="title-text">
+      Rezervare masă
+    </div>
+
+    <h2 style="color: black;">Vă rog să selectați/completați câmpurile de mai jos.</h2>
+    <div class="inputs">
+      <form action="/createreservation" method="post" enctype="multipart/form-data">
+        <div class="group" id="group">
+          <p>Numărul de persoane</p>
+          <select name="capacity" id="select">
+            <option selected="selected">Două</option>
+            <option>Patru</option>
+            <option>Șase</option>
+          </select>
+        </div>
+        <div class="group" id="group">
+          <p id="group-p">Nume si prenume</p id="group-p">
+          <input type="text" name="name" id="input" placeholder="Numele dvs." value="" required>
+          <input type="text" name="last_name" id="input" placeholder="Prenumele dvs." value="" required>
+        </div>
+        <div class="group" id="group">
+          <p id="group-p">Date de contact</p>
+          <input type="text" name="email" id="input" placeholder="Adresa dvs. de email" value="">
+          <input type="text" name="phoneNumber" id="input" placeholder="Numarul dvs. de telefon" value="">
+        </div>
+
+        <div class="group" id="group">
+          <p id="group-p">Data rezervarii</p>
+          <div class="container">
+            <div class="row">
+              <div class='col-sm-3'>
+                <div class="form-group">
+                  <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' name="start_date" class="form-control" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group" id="group">
+          <p id="group-p">Ora rezervării</p>
+          <input type="text" name="hour" id="input" placeholder="Ex: 16:00" value="">
+        </div>
+
+
+        <button type="submit" class="buton">Creati rezervarea</button>
+        <p style="color: black">* veti primi un email de confirmare.</p>
+      </form>
+    </div>
+
+  </section>
+  <% include partials/footer.ejs %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+
+  <script>
+    $(function () {
+      var bindDatePicker = function () {
+        $(".date").datetimepicker({
+          format: 'DD/MM/YYYY',
+          icons: {
+            time: "fa fa-clock-o",
+            date: "fa fa-calendar",
+            up: "fa fa-arrow-up",
+            down: "fa fa-arrow-down"
+          }
+        }).find('input:first').on("blur", function () {
+          // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+          // update the format if it's yyyy-mm-dd
+          var date = parseDate($(this).val());
+
+          if (!isValidDate(date)) {
+            //create date based on momentjs (we have that)
+            date = moment().format('DD-MM-YYYY');
+          }
+
+          $(this).val(date);
+        });
+      }
+
+      var bindDatePicker2 = function () {
+        $(".date").datetimepicker({
+          format: 'DD/MM/YYYY',
+          icons: {
+            time: "fa fa-clock-o",
+            date: "fa fa-calendar",
+            up: "fa fa-arrow-up",
+            down: "fa fa-arrow-down"
+          }
+        }).find('input:first').on("blur", function () {
+          // check if the date is correct. We can accept dd-mm-yyyy and yyyy-mm-dd.
+          // update the format if it's yyyy-mm-dd
+          var date = parseDate($(this).val());
+
+          if (!isValidDate(date)) {
+            //create date based on momentjs (we have that)
+            date = moment().format('DD-MM-YYYY');
+          }
+
+          $(this).val(date);
+        });
+      }
+
+      var isValidDate = function (value, format) {
+        format = format || false;
+        // lets parse the date to the best of our knowledge
+        if (format) {
+          value = parseDate(value);
+        }
+
+        var timestamp = Date.parse(value);
+
+        return isNaN(timestamp) == false;
+      }
+
+      var parseDate = function (value) {
+        var m = value.match(/^(\d{1,2})(\/|-)?(\d{1,2})(\/|-)?(\d{4})$/);
+        if (m)
+          //value = m[5] + '/' + ("00" + m[3]).slice(-2) + '/' + ("00" + m[1]).slice(-2);
+          value = ("00" + m[1]).slice(-2) + '/' + ("00" + m[3]).slice(-2) + '/' + m[5];
+        return value;
+      }
+
+      bindDatePicker();
+      bindDatePicker2();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -27,7 +27,12 @@ const {
 } = require("./routes/rezervari");
 const { getLoginPage } = require("./routes/login");
 const { getAccountPage, editAccount } = require("./routes/account");
-const { getRestaurantPage, getMenuPage } = require("./routes/restaurant");
+const {
+	getRestaurantPage,
+	getMenuPage,
+	getReservationPage,
+	createReservation
+} = require("./routes/restaurant");
 const { getContactPage, createTicket } = require("./routes/contact");
 
 const port = 2608;
@@ -76,6 +81,7 @@ app.get("/rezervare/:type", getBookingPage);
 app.get("/restaurant", getRestaurantPage);
 app.get("/menu", getMenuPage);
 app.get("/contact", getContactPage);
+app.get("/dining", getReservationPage);
 
 app.get("/privacy", function (req, res) {
 	res.render("policy.ejs", {
@@ -85,6 +91,7 @@ app.get("/privacy", function (req, res) {
 
 app.post("/editaccount", editAccount);
 app.post("/createbooking/:type", createBooking);
+app.post("/createreservation", createReservation);
 app.post("/contactForm", createTicket);
 
 passport.serializeUser(function (user, done) {

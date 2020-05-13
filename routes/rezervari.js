@@ -140,8 +140,8 @@ module.exports = {
                     <p class="info"><b>Prenume: ${last_name}</b></p>
                     <p class="info"><b>Tip camera: ${roomData[0].Type}</b></p>
                     <p class="info"><b>Email: ${email}</b></p>
-                    <p class="info"><b>Durata rezervarii: ${start_date}</b></p>
-                    <p class="info"><b>Numar de telefon: ${end_date}</b></p>
+                    <p class="info"><b>Durata rezervarii: ${start_date} - ${end_date}</b></p>
+                    <p class="info"><b>Numar de telefon: ${phoneNumber}</b></p>
                     <p class="info"><b>Numar adulti: ${adultsNumber}</b></p>
                     <p class="info"><b>Numar copii: ${childrenNumber}</b></p>
                     <br>
