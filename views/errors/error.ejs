@@ -1,35 +1,32 @@
 <html>
+	<head>
+		<title>Hotel Juliette - <%= title %></title>
 
-<head>
+		<% include ../partials/meta.ejs %>
 
-  <title>Hotel Julitte - <%= title %></title>
+		<link rel="stylesheet" href="../assets/css/style.css" />
+		<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+	</head>
 
-  <% include ../partials/meta.ejs %>
+	<body>
+		<% include ../partials/navbar.ejs %>
 
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+		<section class="error">
+			<div class="error-h">
+				<div class="error-v">
+					<img src="../assets/img/logo.png" class="error-img" />
+				</div>
+			</div>
+			<div class="error-text">
+				Rezervarea dumneavoastră nu a putut fi înregistrată. Va rugăm sa ne
+				contactați la hotel@thedrop.me
+			</div>
+		</section>
 
-</head>
-
-<body>
-
-  <% include ../partials/navbar.ejs %>
-
-  <section class="error">
-    <div class="error-h">
-      <div class="error-v">
-        <img src="../assets/img/logo.png" class="error-img">
-      </div>
-    </div>
-    <div class="error-text">
-      Rezervarea dumneavoastră nu a putut fi înregistrată. Va rugăm sa ne contactați la hotel@thedrop.me
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="copyright">&copy; Copyright 2019 Hotel Julitte - All Rights Reserved</div>
-  </footer>
-
-</body>
-
+		<footer class="footer">
+			<div class="copyright">
+				&copy; Copyright 2019 Hotel Juliette - All Rights Reserved
+			</div>
+		</footer>
+	</body>
 </html>

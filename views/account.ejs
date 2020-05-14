@@ -1,96 +1,96 @@
 <html>
+	<head>
+		<title>Hotel Juliette - <%= title %></title>
 
-<head>
-  <title>Hotel Julitte - <%= title %></title>
+		<% include ./partials/meta.ejs %>
 
-  <% include ./partials/meta.ejs %>
+		<link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule=""
+			src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"
+		></script>
+	</head>
 
-  <link rel="stylesheet" href="assets/css/style.css?v=<%= Date.now() %>" />
-  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-</head>
+	<body>
+		<% include partials/navbar.ejs %> <% let compartiment, post, instagram;
+		accounts.forEach((account) => { if(account.User_ID == user.id) { instagram =
+		account.Instagram; } roles.forEach((role) => { if(account.User_ID == user.id
+		&& account.Compartiment == role.Name) { compartiment = account.Compartiment;
+		post = account.Role; } }); }); %>
 
-<body>
+		<section class="content">
+			<div class="title-text">
+				Setările contului
+			</div>
 
-  <% include partials/navbar.ejs %>
+			<% if (!user) return res.redirect("/login"); %>
 
-  <%
+			<h2 style="color: black; line-height: 0;">
+				Bună ziua, <%= user.displayName %>.
+			</h2>
+			<h2 style="color: black;">
+				Vă rog să selectați/completați câmpurile de mai jos.
+			</h2>
+			<div class="inputs">
+				<form action="/editaccount" method="post" enctype="multipart/form-data">
+					<div class="group">
+						<p>Compartiment (<%= compartiment %>)</p>
+						<select name="compartiment">
+							<% if(!compartiment || compartiment == "Selectați") { %>
 
-    let compartiment, post, instagram;
+							<option selected="selected">Selectați</option>
 
-    accounts.forEach((account) => {
-      if(account.User_ID == user.id) {
-        instagram = account.Instagram;
-      }
-      roles.forEach((role) => {
-        if(account.User_ID == user.id && account.Compartiment == role.Name) {
-          compartiment = account.Compartiment;
-          post = account.Role;
-        }
-      });
-    });
+							<% } else { %>
 
-    %>
+							<option>Selectați</option>
 
-  <section class="content">
+							<% } %> <% roles.forEach((role) => { %> <% if(role.Name ==
+							compartiment) { %>
 
-    <div class="title-text">
-      Setările contului
-    </div>
+							<option selected="selected" value="<%= role.Name %>"
+								><%= role.Name %></option
+							>
 
-    <% if (!user) return res.redirect("/login"); %>
+							<% } else { %>
 
-    <h2 style="color: black; line-height: 0;">Bună ziua, <%= user.displayName %>.</h2>
-    <h2 style="color: black;">Vă rog să selectați/completați câmpurile de mai jos.</h2>
-    <div class="inputs">
-      <form action="/editaccount" method="post" enctype="multipart/form-data">
-        <div class="group">
-          <p>Compartiment (<%= compartiment %>)</p>
-          <select name="compartiment">
+							<option value="<%= role.Name %>"><%= role.Name %></option>
 
-            <% if(!compartiment || compartiment == "Selectați") { %>
+							<% } %> <% }); %>
+						</select>
+					</div>
+					<div class="group">
+						<p>Post</p>
+						<input
+							type="text"
+							class="form-control"
+							name="post"
+							id="post"
+							placeholder="Postul dvs. (Ex: Specialist IT)"
+							value="<%= post %>"
+							required
+						/>
+					</div>
+					<div class="group">
+						<p>Instagram</p>
+						<input
+							type="text"
+							class="form-control"
+							name="instagram"
+							id="instagram"
+							placeholder="Fara @. Ex: alex.tulbure4"
+							value="<%= instagram %>"
+						/>
+					</div>
+					<button type="submit" class="buton">Salvare</button>
+					<a href="/logout" class="buton red">Logout</a>
+				</form>
+			</div>
+		</section>
 
-            <option selected="selected">Selectați</option>
-
-            <% } else { %>
-
-            <option>Selectați</option>
-
-            <% } %>
-
-            <% roles.forEach((role) => { %>
-
-            <% if(role.Name == compartiment) { %>
-
-            <option selected="selected" value="<%= role.Name %>"><%= role.Name %></option>
-
-            <% } else { %>
-
-            <option value="<%= role.Name %>"><%= role.Name %></option>
-
-            <% } %>
-
-            <% }); %>
-          </select>
-        </div>
-        <div class="group">
-          <p>Post</p>
-          <input type="text" class="form-control" name="post" id="post" placeholder="Postul dvs. (Ex: Specialist IT)"
-            value="<%= post %>" required>
-        </div>
-        <div class="group">
-          <p>Instagram</p>
-          <input type="text" class="form-control" name="instagram" id="instagram"
-            placeholder="Fara @. Ex: alex.tulbure4" value="<%= instagram %>">
-        </div>
-        <button type="submit" class="buton">Salvare</button>
-        <a href="/logout" class="buton red">Logout</a>
-      </form>
-    </div>
-
-  </section>
-
-  <% include partials/footer.ejs %>
-</body>
-
+		<% include partials/footer.ejs %>
+	</body>
 </html>
